@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Dancing+Script&display=swap');
+
+
+/* font-family: 'Advent Pro', sans-serif;
+font-family: 'Dancing Script', cursive; */ 
+
+body{
+	font-family: 'Advent Pro', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+
+li{
+	list-style: none;
+}
+
+h2{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2em;
+	padding-top: 30px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+p{
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+
+/* ******NAVBAR******* */
+
+nav{
+	overflow: hidden;
+	background-color: #FFFAE1;
+	position: fixed;
+	width: 100%;
+	opacity: 0.9;
+}
+
+header li{
+float: right;
+font-size: 1.2em;
+font-weight: bold;
+}
+
+header li a{
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	padding: 18px 16px;
+}
+
+#logo {
+	float: left;
+	font-family: "Dancing Script", cursive;
+	font-weight: bolder;
+	font-size: 1.8em;
+
+}
+
+/*********   IMAGE   PRINCIPALE   ***********/
+
+#imageprincipale{
+	padding-top: 60px;
+	background: url(img/stand.jpeg) fixed no-repeat 50% 50%;
+	background-size: cover;
+	height: 100vh;
+}
+
+h1{
+	font-family: "dancing script",cursive;
+	text-align: center;
+	color: antiquewhite;
+	font-size: 6em;
+	text-shadow: 1px 3px 2px black;
+	margin-top: 30vh;
+}
+
+#premiertrait{
+	height: 1px;
+	width: 15%;
+	margin: -50px auto;
+	background-color: #FFFAE1;
+	box-shadow: 1px 3px 2px black;
+}
+
+h3{
+	text-align: center;
+	color: antiquewhite;
+	font-size: 3em;
+	text-shadow: 1px 3px 2px black;
+}
+
+/********* PRESENTATION **************/
+
+#presentation{
+	background-color: #FFFAE1;
+	padding: 10px Opx 100px 0px;
+	padding: 1px 2%;
+}
+
+#textintro{
+	padding: 10px 10%;
+	width: 80%;
+}
+
+#prestations{
+	display: flex;
+	padding: 30px 10%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.imagesprestations{
+	font-family: "Dancing script", cursive;
+	text-align: center;
+	font-size: 1.8em;
+	margin: 15px;
+	font-weight: 300;
+}
+
+.imagesprestations img{
+	border-radius: 10px;            /****** Arrondir les angles des photos **********/
+	box-shadow: 7px 10px 13px 7px rgba(0,0,0,0.94);
+
+}
+
+.imagesprestations img:hover{		/******** Style pour les images *********/
+	opacity: 0.5;
+	transform: scale(1.05);
+	transition: 0.6s ease-in-out;
+}
+
+/********************* ADRESSES *********************/
+
+#localisation{
+	height: 1400;
+	background-color: #F1F2F6;
+	padding: 30px ;
+	flex-wrap: wrap;
+	display: flex;
+	padding-bottom: 50px;
+	justify-content: space-around;
+}
+
+#localisation h2{
+	padding-top: 20px;
+	text-decoration: underline;
+}
+
+#colombes{
+	width: 50%;
+	text-align: center;
+}
+
+#colombes:hover{
+	opacity: 0.8;
+	transform: scale(1.05);
+	transition: 0.6s ease-in-out;
+}
+
+#charenton{
+	width: 50%;
+	text-align: center;
+}
+
+#charenton:hover{
+	opacity: 0.8;
+	transform: scale(1.05);
+	transition: 0.6s ease-in-out;
+}
+
+.adresse{
+	font-size: 1.6em;
+}
+
+.horaire{
+	font-size: 1.4em;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+#titrelocalisation{
+	background-color: #F1F2F6;
+	width: 80%;
+	padding: 10px 10%;
+	font-weight: bolder;
+	font-size: 1em;
+	text-align: center;
+}
+
+iframe{
+	border-radius: 10%;
+	box-shadow: 7px 10px 13px 7px rgba(0,0,0,0.94);
+}
+
+/*************** CONTACT *********************/
+
+footer{
+	background-color: #FFFAE1;
+	padding: 1px 2%;
+		
+}
+
+#contact {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#fichecontact{
+	width: 50%;
+	text-align: center;
+}
+
+#fichecontact h4{
+	font-size: 1.8em;
+}
+
+#textpresentation{
+
+	width: 50%;
+	text-align: center;
+	
+
+}
+
+#copyrighticons{
+	font-size: 0.7em;
+	overflow: hidden;
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+
