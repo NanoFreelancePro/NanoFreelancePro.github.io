@@ -1,0 +1,11 @@
+{
+  "name": "projet-2",
+  "version": "1.0.0",
+  "description": "Deuxième projet du parcours développeur web chez OpenClassrooms. L'objectif est d'intégrer la maquette d'un site de planification de vacance nommé \"Reservia\" (voir l'image ci-dessous).",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/sass.scss:./public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
