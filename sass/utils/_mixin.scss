@@ -1,0 +1,19 @@
+/* MIXINS */
+@mixin border_test {
+    border: 1px solid black;
+}
+@mixin name__pic {
+    font-size: 00.8em;
+    font-weight: bold;
+}
+@mixin price__pic {
+    font-size: 0.7em;
+}
+@mixin star__pic {
+    font-size: 0.7em;
+    color: $blue;
+}
+@mixin name__bloc {
+    font-size: 1em;
+    font-weight: bold;
+}

@@ -1,0 +1,28 @@
+/* GENERAL */
+body{
+    font-family: raleway, "sans_serif";
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.title__bloc{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-left: 25px;
+}
+/* GENERAL */
+/* MEDIA QUERIES */
+@media all and (max-width: 1024px){
+    .title__bloc{
+        font-size: 2.5em;
+        margin-left: 45px;
+    }
+    body{
+        width: 100%;
+    }
+}

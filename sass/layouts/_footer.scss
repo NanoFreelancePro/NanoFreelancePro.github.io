@@ -1,0 +1,35 @@
+/* FOOTER */
+.footer{
+    background: $grey;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &__bloc{
+        width: 170px;
+    }
+    &__title{
+        @include name__pic();
+        margin-bottom: 12px;
+    }
+    &__list{
+        @include price__pic();
+        padding-inline-start: 0;
+    }
+    &__link{
+        margin: 8px 0;
+    }
+}
+/* FOOTER */
+/* MEDIA QUERIES */
+@media all and (max-width: 1024px){
+    .footer{
+        height: auto;
+        &__bloc{
+        width: 100%;
+        font-size: 1.5em;
+        text-align: center;
+        }
+    }
+}

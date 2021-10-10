@@ -1,0 +1,39 @@
+/* RESULT & POPULAR */
+.bloc__result{
+    width: 96%;
+    height: 580px;
+    margin: 10px 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+.result__search{
+    width: 70%;
+    background: $grey;
+    border-radius: 20px;
+}
+.result__popular{
+    width: 28%;
+    background: $grey;
+    border-radius: 20px;
+}
+#star_grey1{
+    color: #d1cfcf;
+}
+#star_grey2{
+    color: #d1cfcf;
+}
+#star_grey3{
+    color: #d1cfcf;
+}
+/* RESULT & POPULAR */
+/* MEDIA QUERIES */
+@media all and (max-width: 1024px){
+    .bloc__result{
+        flex-wrap: wrap-reverse;
+        justify-content: space-around;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}

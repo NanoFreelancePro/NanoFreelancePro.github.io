@@ -1,0 +1,24 @@
+/* HOVER */
+a:hover{   
+    color: $blue;
+}
+.pic__hover:hover{		/******** Style pour les images *********/
+	transform: scale(1.05);
+	transition: 0.2s ease-in-out;
+}
+.btn__menu:hover{
+    border-top: 3px solid $blue; 
+}
+.search__btn:hover{
+    background-color: lighten($blue, 10%);
+}
+.search__btn:active{
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+a.filter--link:hover{
+    background: $blue;
+    color: white;
+    border: none;
+    border-radius: 0px 25px;
+}

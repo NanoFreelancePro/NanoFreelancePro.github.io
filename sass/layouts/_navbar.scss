@@ -1,0 +1,85 @@
+/* NAVBAR */
+.btn__menu{
+    padding-top: 17px;
+    width: 200px;
+}
+#btn_sign_in{
+    color: $blue;
+}
+nav{
+    height: auto;
+}
+.navbar{
+    height: auto;
+    width: 96%;
+    margin-left: 2%;
+    &__img{
+        float: left;
+        left: 25px;
+        width: 100px;
+        padding-left: 25px;
+    }
+    &__menu{
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+        margin: 0;
+        padding-inline-start: 0;
+    }
+    &__btn{
+        font-weight: bold;
+        font-size: 1em;
+        height: 40px;
+        width: 200px;
+        padding:20px;
+    }
+}
+/* NAVBAR */
+/* MEDIA QUERIES */
+@media all and (max-width: 1024px){
+    .btn__menu:hover{
+        border-top: none; 
+    }
+    #btn_sign_in{
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        color: $blue;
+        float: right;
+        text-align: center;
+    }
+    #btn_hebergement{
+        position: absolute;
+        top: 96px;
+        left: 10px;
+        width: 48%;
+        border-bottom: 2px solid $grey;
+        padding-bottom: 15px;
+    }
+    #btn_hebergement:hover{
+        border-bottom: 3px solid $blue;
+    }
+    #btn_activity{
+        position: absolute;
+        top: 96px;
+        right: 10px;
+        width: 48%;
+        border-bottom: 2px solid $grey;
+        padding-bottom: 15px;
+    }
+    #btn_activity:hover{
+        border-bottom: 3px solid $blue;
+    }
+    .navbar{
+        height: 160px;
+        position: relative;
+        &__img{
+            float: left;
+            width: 150px;
+        }
+        &__btn{
+          font-size: 1.5em; 
+        }
+    }
+}

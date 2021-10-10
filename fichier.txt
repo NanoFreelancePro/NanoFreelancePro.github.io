@@ -1,0 +1,73 @@
+# Reservia
+Deuxième projet du parcours développeur web chez OpenClassrooms.
+L'objectif est d'intégrer la maquette d'un site de planification de vacance nommé "Reservia" (voir l'image ci-dessous).
+
+![maquette web reservia](./img/mockup/desktop.png)
+
+## Éléments fournis par l'entreprise virtuelle.
+- La maquette pour les résolutions ordinateur et téléphone nous est donné.
+- Toutes les images présentes sur le site sont aussi livrés en format sm, md, l & xl.
+- Les icones proviennent de [Font Awesome](https://fontawesome.com/)
+- Les couleurs sont : bleu #0065FC - bleu clair #DEEBFF - gris #F2F2F2
+- La police est ["Raleway"](https://fonts.google.com/specimen/Raleway)
+
+## Cahier des charges
+- L'integration doit se faire en HTML5 & CSS3, sans framework (bootstrap par exemple)
+- Le champ de recherche doit être un champ de saisie, dont le texte peut être édité. La fonctionnalité de recherche ne doit pas être implémenté pour autant.
+- Chaque carte d’hébergement ou d’activité devra être cliquable dans son intégralité. Pour l’instant les liens seront vides.
+- Les filtres, bien que non fonctionnels, doivent changer de style au survol.
+- Dans le menu, les liens “Hébergements” et “Activités” sont des ancres qui doivent mener aux sections de la page.
+- Même si aucune maquette pour la résolution tablette n'est fournis, l'intégration doit la prendre en charge.
+- Les images doivent être de taille adéquate afin qu'elle soit le plus jolie possible en impactant le moins possible le temps de chargement de la page.
+- [Le code devra utiliser les balises sémantiques et ne doit contenir aucune erreur ni alerte au validateur W3C HTML et CSS.](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmathisbarre.github.io%2FMathisBarre_2_14102020%2F)
+- Le site devra être compatible avec les dernières versions de Chrome et Firefox.
+- Le HTML et le CSS doivent être séparés et le dossier doit être organisé
+- Le code doit être versionné avec git et doit avoir un repo distant sur Github ou Gitlab
+
+
+Difficultés : 
+
+- Boutton recherche à changer avec une loupe.
+- Jouer avec les différentes tailles des blocs et images.
+- M'appropier les icones Font Awesome.
+- J'ai essayé d'organiser au mieux mes class (à voir si je peux m'améliorer).
+
+Mode Mobile
+- difficultés rencontrer pour mettre le menu comme sur l'image, j'ai du le faire avec la
+position relative, je ne sais pas si c'est le meilleur moyen pour y parvenir.
+
+À faire :
+
+- Redimensionner les images des parties HÉBERGEMENT et ACTIVITÉS.
+- Redimensionner les parties RECHERCHES et FILTRES.
+- Améliorer mon approche avec Github.
+
+Outils :
+
+- Virtual Studio Code.
+- Sass via le terminal.
+- Références HTML et CSS (MDN)
+- Bcp internet pour revoir cours et aller chercher les infos.
+
+Validé W3C HTML et CSS.
+
+Temps de travail :
+
+vendredi 8 octobre 2021 :
+10H00 à 12H30 :         02H30   HTML / CSS
+14H00 à 20H30 :         06H30   HTML / CSS
+22H00 à 23H00 :         01H00   HTML / CSS
+23H30 à 00H00 :         00H30   HTML / CSS 
+TOTAL :                 10H30   
+
+samedi 09 octobre 2021 :
+00H00 à 04H30 :         04H30   HTML / CSS
+14H00 à 20H30 :         06H30   HTML / CSS
+TOTAL :                 11H00   HTML / CSS Media Queries
+
+dimanche 10 octobre :
+00H30 à 02H30 :         02H00   HTML / CSS Media Queries
+14H30 à 18H00 :         03H30   Finalisation des Media Queries / Organisation des dossiers/fichiers scss
+TOTAL :                 05H30
+
+Temps de travail total : 27H00

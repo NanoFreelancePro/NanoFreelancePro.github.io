@@ -1,0 +1,75 @@
+/* POPULAR */
+#logo_croissance{
+    float: right;
+    padding-right: 10px;
+    font-size: 1em;
+}
+#popular__title{
+    font-size: 00.7em;
+    margin-left: 5%;
+}
+.popular{
+    width: 90%;
+    margin: 5%;
+    height: 150px;
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 0px lightgrey;
+    overflow: hidden;
+    &__pic{
+        object-fit: cover;
+        width: 35%;
+        height: 90%;
+        border-radius: 10px 0 0 10px;
+        margin: 2%;
+    }
+    &__name{
+        @include name__pic();
+        margin: 5px 5% 1px 5%;
+    }
+    &__price{
+        @include price__pic();
+        margin: 2px 5px;
+    }
+    &__star{
+        @include star__pic();
+        margin: 78px 10px;
+    }
+}
+/* POPULAR */
+/* MEDIA QUERIES */
+@media all and (max-width: 1024px){
+    #logo_croissance{
+        font-size: 1em;
+    }
+    .result__popular{
+        width: 100%;
+        align-items: center;
+        border-radius: 0;
+    }
+    .popular{
+        height: 300px;
+        border-radius: 40px;
+        width: 90%;
+        &__pic{
+            border-radius: 35px 0 0 35px;
+            margin: 1%;
+            height: 95%;   
+        }
+        &__left__part{
+            width: 100%;
+        }
+        &__name{
+            font-size: 1.8em;
+        }
+        &__price{
+            font-size: 1.5em;
+            margin-left: 5%;
+        }
+        &__star{
+            font-size: 1.5em;
+            margin-left: 5%;
+        }
+    }
+}
