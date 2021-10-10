@@ -11,13 +11,13 @@
     <body>
 <!-- NAVBAR -->
         <header>
-            <nav class="bloc"> 
+            <nav> 
                 <div class="navbar">
                 <a href="index.html"><img class="navbar__img" src="public/img/reservia_logo.png" alt="Logo du site reservia"></a>
                 <ul class="navbar__menu">
-                    <li class="navbar__btn"><a class="btn__menu" href="#hebergement">Hébergements</a></li>
-                    <li class="navbar__btn"><a class="btn__menu" href="#activity__title">Activités</a></li>
-                    <li class="navbar__btn"><a class="btn__menu" href="#inscription">S'inscrire</a></li>
+                    <li class="navbar__btn"><a id="btn_hebergement" class="btn__menu" href="#hebergement">Hébergements</a></li>
+                    <li class="navbar__btn"><a id="btn_activity" class="btn__menu" href="#activites">Activités</a></li>
+                    <li class="navbar__btn"><a id="btn_sign_in" class="btn__menu" href="#inscription">S'inscrire</a></li>
                 </ul>
                 </div>
             </nav>
@@ -31,7 +31,7 @@
               <div class="search">           
                 <div class="search__pic"><i class="fas fa-map-marker-alt"></i></div>
                 <input class="search__area" type="text" name="search__area" value="Marseille, France">
-                <button class="search__btn">Rechercher</button>
+                <button class="search__btn"><span class="screen">Rechercher</span><span class="mobile"><i class="fas fa-search"></i></span></button>
             </div>
 
 <!-- FILTER -->
@@ -44,15 +44,15 @@
                        <li class="filter__selection"><a class="filter--link" href="#"><i class="fas fa-dog"></i>Animaux autorisés</a></li>
                     </ul>
                 </div>
-                <p><i id="logo_info" class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+                <p class="filter__text"><i id="logo_info" class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
         </section>
 
 <!-- RESULT -->
         <section class="bloc__result">
             <div class="result__search">
-                <h2 id="hebergement">Hébergements à Marseille</h2>
+                <h2 id="hebergement" class="title__bloc">Hébergements à Marseille</h2>
             <div class="selection">
-                <div class="selection__bloc"><a class="pic__hover" href="">
+                <div class="selection__bloc pic__hover"><a class="pic__hover" href="">
                     <img class="selection__pic" src="./public/img/hosting/small/auberge_la_cannebiere.jpg" alt="photo de chambre">
                     <h2 class="selection__name">Auberge la Cannebière</h2>
                     <p class="selection__price">Nuit à partir de 25€</p>
@@ -63,7 +63,7 @@
                     <i class="fas fa-star-half-alt"></i>
                     <i class="fas fa-star" style="color: #d1cfcf;"></i></div></a>
                 </div>
-                <div class="selection__bloc"><a class="pic__hover" href="">
+                <div class="selection__bloc pic__hover"><a class="pic__hover" href="">
                     <img class="selection__pic" src="./public/img/hosting/small/hotel_du_port.jpg" alt="photo de chambre">
                     <h2 class="selection__name">Hôtel du port</h2>
                     <p class="selection__price">Nuit à partir de 52€</p>
@@ -74,7 +74,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i></div></a>
                 </div>
-                <div class="selection__bloc"><a class="pic__hover" href="">
+                <div class="selection__bloc pic__hover"><a class="pic__hover" href="">
                     <img class="selection__pic" src="./public/img/hosting/small/hotel_les_mouettes.jpg" alt="photo de chambre">
                     <h2 class="selection__name">Hôtel Les mouettes</h2>
                     <p class="selection__price">Nuit à partir de 76€</p>
@@ -85,7 +85,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i></div></a> 
                 </div>              
-                <div class="selection__bloc"><a class="pic__hover" href="">
+                <div class="selection__bloc pic__hover"><a class="pic__hover" href="">
                     <img class="selection__pic" src="./public/img/hosting/small/hotel_de_la_mer.jpg" alt="photo de chambre">
                     <h2 class="selection__name">Hôtel de la mer</h2>
                     <p class="selection__price">Nuit à partir de 46€</p>
@@ -96,7 +96,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i></div></a>                
                 </div>
-                <div class="selection__bloc"><a class="pic__hover" href="">
+                <div class="selection__bloc pic__hover"><a class="pic__hover" href="">
                     <img class="selection__pic" src="./public/img/hosting/small/auberge_le_panier.jpg" alt="photo de chambre">
                     <h2 class="selection__name">Auberge Le panier</h2>
                     <p class="selection__price">Nuit à partir de 23€</p>
@@ -107,7 +107,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star" style="color: #d1cfcf;"></i></div></a>               
                 </div>
-                <div class="selection__bloc"><a class="pic__hover" href="">
+                <div class="selection__bloc pic__hover"><a class="pic__hover" href="">
                     <img class="selection__pic" src="./public/img/hosting/small/hotel_chez_amina.jpg" alt="photo de chambre">
                     <h2 class="selection__name">Hôtel chez Amina</h2>
                     <p class="selection__price">Nuit à partir de 96€</p>
@@ -124,10 +124,10 @@
 
 <!-- POPULAR -->
             <div class="result__popular">
-                <h2 id="popular__title">Les plus populaires<i id="logo_croissance" class="fas fa-chart-line"></i></h2>
+                <h2 class="title__bloc">Les plus populaires<i id="logo_croissance" class="fas fa-chart-line"></i></h2>
                 
                 <a class="pic__hover" href="">
-                <div class="popular">                 
+                <div class="popular pic__hover">                 
                     <img class="popular__pic" src="./public/img/hosting/small/hotel_le_soleil_du_matin.jpg" alt="photo de chambre">
                     <div class="popular__left__part">
                     <h2 class="popular__name">Hôtel Le soleil du matin</h2>
@@ -144,7 +144,7 @@
                 </a>
 
                 <a class="pic__hover" href="">
-                <div class="popular">
+                <div class="popular pic__hover">
                     <img class="popular__pic" src="./public/img/hosting/small/au_coeur_de_l_eau_chambres_d_hotes.jpg" alt="photo de chambre">
                     <div class="popular__left__part">
                     <h2 class="popular__name">Au coeur de l'eau Chambres d'hôtes</h2>
@@ -161,7 +161,7 @@
                 </a>
 
                 <a class="pic__hover" href="">
-                <div class="popular">
+                <div class="popular pic__hover">
                     <img class="popular__pic" src="./public/img/hosting/small/hotel_tout_bleu_et_blanc.jpg" alt="photo de chambre">
                     <div class="popular__left__part">
                     <h2 class="popular__name">Hôtel tout bleu et blanc</h2>
@@ -181,9 +181,9 @@
 
 <!-- ACTIVITY -->
     <div class="activity__bloc">
-        <h1 id="activity__title" class="title__bloc">Activités à Marseille</h1>
+        <h1 id="activites" class="title__bloc">Activités à Marseille</h1>
         <div class="activity">
-            <div class="activity__bloc__medium">
+            <div class="activity__bloc__medium pic__hover">
                 <div class="activity__medium"><a class="pic__hover" href="">
                 <img class="activity__pic__medium" src="./public/img/activity/medium/vieux_port.jpg" alt="activité">
                 <p class="activity__name">Vieux port</p></a>
@@ -191,31 +191,31 @@
             </div>
 
             <div class="activity__bloc__small">
-                <div class="activity__small"><a class="pic__hover" href="">
+                <div class="activity__small pic__hover"><a class="pic__hover" href="">
                 <img class="activity__pic__small" src="./public/img/activity/small/fort_de_pomegues.jpg" alt="activité">
                 <p class="activity__name">Fort de Pomègues</p></a>
                 </div>
 
-                <div class="activity__small"><a class="pic__hover" href="">
+                <div class="activity__small pic__hover"><a class="pic__hover" href="">
                 <img class="activity__pic__small" src="./public/img/activity/small/ile_du_frioul.jpg" alt="activité">
                 <p class="activity__name">Îles du Fioul</p></a>
                 </div>
             </div>
             
 
-            <div class="activity__bloc__medium">
-                <div class="activity__medium"><a class="pic__hover" href="">
+            <div class="activity__bloc__medium pic__hover">
+                <div class="activity__medium"><a href="">
                 <img class="activity__pic__medium" src="./public/img/activity/medium/parc_national_des_calanques.jpg" alt="activité">
                 <p class="activity__name">Parc National des Calanques</p></a>
                 </div>
             </div>
             <div class="activity__bloc__small">
-                <div class="activity__small"><a class="pic__hover" href="">
+                <div class="activity__small pic__hover"><a class="pic__hover" href="">
                 <img class="activity__pic__small" src="./public/img/activity/small/notre_dame_de_la_garde.jpg" alt="activité">
                 <p class="activity__name">Notre Dame de la Garde</p></a>
                 </div>
                 
-                <div class="activity__small"><a class="pic__hover" href="">
+                <div class="activity__small pic__hover"><a class="pic__hover" href="">
                 <img class="activity__pic__small" src="./public/img/activity/small/parc_longchamp.jpg" alt="activité">
                 <p class="activity__name">Parc Longchamp</p></a>
                 </div>
