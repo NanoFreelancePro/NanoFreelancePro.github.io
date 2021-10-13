@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+}
+
+header{
+    background: url(img/main.jpg) fixed 50% 50%;
+    background-size: cover;
+    height: 100vh;
+}
+
+h1{
+    background: black;
+    overflow: hidden;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 30px;
+    text-shadow: 2px 2px 0px #b60502, -2px -2px 0px #b60502, 2px -2px 0px #b60502, -2px 2px 0px #b60502;
+     
+    text-align: center;
+    color: #f8cf00;
+    font-size: 5em;
+    margin-top: 0;
+    
+}
