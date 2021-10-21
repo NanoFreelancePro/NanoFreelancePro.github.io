@@ -1,0 +1,69 @@
+/* RESULT */
+.result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60%;
+    background: $color-bloc;
+    border-radius: 40px;
+    @media screen and (max-width: 1024px) {
+        width: 100%;   
+        background: $color-bg;
+        border-radius: 0; 
+    }
+    &__title{
+        width: 100%;
+        margin-left: 45px;
+        font-size: $size-title;
+    }
+    &__thumb{
+        cursor: pointer;
+        width: 260px;
+        height: 190px;
+        background: $color-thumb;
+        margin: 20px 10px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 8px 0px #00000082;
+        text-overflow: ellipsis;
+        @media screen and (max-width: 1024px) {
+            width: 45%; 
+            height: 200px;      
+        }
+        @media screen and (max-width: 480px) {
+            width: 80%; 
+            height: 200px;      
+        }
+        &:hover{
+        animation: thumb 200ms ease-in-out both;
+        }
+        &--pic{
+            width: auto;
+            height: 60%;
+            margin: 1%;
+            background-size: cover;
+            border-radius: 20px 20px 0 0;
+        }
+        &--name{
+            margin-left: 15px;
+            font-weight: bold;
+        }
+        &--price{
+            margin-left: 15px;
+            font-size: 0.9em;
+        }
+        &--star{
+            margin-left: 15px;
+            margin-top: 7px;
+            font-size: 13px;
+            color: $color-style-primary;
+            &--grey{
+                color: darken($color-bloc,10);
+            }
+        }
+    }
+    &__txt{
+        width: 100%;
+        margin-left: 45px;
+        font-weight: bold;
+    }
+}

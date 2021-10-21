@@ -1,0 +1,18 @@
+/* UTILS */
+@import "./utils/variables";
+@import "./utils/mapes";
+@import "./utils/mixins";
+@import "./utils/keyframes";
+/* BASES */
+@import "./bases/fonts";
+@import "./bases/size";
+@import "./bases/img";  /* IMG du site avec MAPES et MIXINS dans .pic */
+/* LAYOUTS */
+@import "./layouts/nav";
+@import "./layouts/search";
+@import "./layouts/filters";
+@import "./layouts/result-popular";
+@import "./layouts/result";
+@import "./layouts/popular";
+@import "./layouts/activity";
+@import "./layouts/footer";

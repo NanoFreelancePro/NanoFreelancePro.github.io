@@ -1,0 +1,4 @@
+/* IMG du site */
+.pic{
+    @include insert-pic($insert-pic)
+}

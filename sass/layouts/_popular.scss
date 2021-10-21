@@ -1,0 +1,71 @@
+/* POPULAR */
+.popular{
+    width: 35%;
+    background: $color-bloc;
+    border-radius: 40px;
+    @media screen and (max-width: 1024px) {
+        width: 100%; 
+        border-radius: 0;        
+    }
+    &__title{
+        margin-left: 25px;
+        font-size: $size-title;
+        @media screen and (max-width: 1024px) {
+            padding-left: 18%;        
+        }
+        @media screen and (max-width: 480px) {
+            padding-left: 5%;      
+        }
+    }
+    &__icon{
+        float: right;
+        margin-right: 30px;
+    }
+    &__thumb{
+        cursor: pointer;
+        display: flex;
+        width: 90%;
+        height: 150px;
+        margin: 40px auto;
+        background: $color-bg;
+        border-radius: 20px;
+        box-shadow: 2px 2px 8px 0px #00000082;
+        @media screen and (max-width: 1024px) {
+            width: 60%; 
+            height: 200px;      
+        }
+        @media screen and (max-width: 480px) {
+            width: 80%;  
+        }
+        &:hover{
+            animation: thumb 200ms ease-in-out both;
+            }
+        &--pic{
+            width: 35%;
+            height: auto;
+            margin: 1%;
+            background-size: cover;
+            border-radius: 20px 0 0 20px;
+        }
+        &__bloc{
+            width: 60%;
+            &--name{
+                margin: 15px;
+                font-weight: bold;
+            }
+            &--price{
+                margin: 15px;
+                font-size: 0.9em;
+            }
+            &--star{
+                margin-left: 15px;
+                margin-top: 15px;
+                font-size: 13px;
+                color: $color-style-primary;
+                &--grey{
+                    color: darken($color-bloc,10);
+                }
+            }
+        } 
+    }
+}

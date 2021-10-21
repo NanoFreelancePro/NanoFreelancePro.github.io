@@ -1,0 +1,21 @@
+/* GENERAL SIZE */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+ul{
+    padding-inline: 0;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    &:visited{
+        color: $color-txt;
+    }
+    &:hover{
+        color: $color-style-primary;
+    }
+}

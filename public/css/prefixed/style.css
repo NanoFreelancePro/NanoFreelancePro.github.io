@@ -1,0 +1,512 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+/* font-family: 'Raleway', sans-serif; */
+/* COLOR PAGE */
+.pic--1 {
+  background: url("../img/hosting/small/auberge_la_cannebiere.jpg") 50% 50%;
+}
+.pic--2 {
+  background: url("../img/hosting/small/hotel_du_port.jpg") 50% 50%;
+}
+.pic--3 {
+  background: url("../img/hosting/small/hotel_les_mouettes.jpg") 50% 50%;
+}
+.pic--4 {
+  background: url("../img/hosting/small/hotel_de_la_mer.jpg") 50% 50%;
+}
+.pic--5 {
+  background: url("../img/hosting/small/auberge_le_panier.jpg") 50% 50%;
+}
+.pic--6 {
+  background: url("../img/hosting/small/hotel_chez_amina.jpg") 50% 50%;
+}
+.pic--7 {
+  background: url("../img/hosting/small/hotel_le_soleil_du_matin.jpg") 50% 50%;
+}
+.pic--8 {
+  background: url("../img/hosting/small/au_coeur_de_l_eau_chambres_d_hotes.jpg") 50% 50%;
+}
+.pic--9 {
+  background: url("../img/hosting/small/hotel_tout_bleu_et_blanc.jpg") 50% 50%;
+}
+.pic--10 {
+  background: url("../img/activity/small/vieux_port.jpg") 50% 50%;
+}
+.pic--11 {
+  background: url("../img/activity/small/fort_de_pomegues.jpg") 50% 50%;
+}
+.pic--12 {
+  background: url("../img/activity/small/ile_du_frioul.jpg") 50% 50%;
+}
+.pic--13 {
+  background: url("../img/activity/small/parc_national_des_calanques.jpg") 50% 50%;
+}
+.pic--14 {
+  background: url("../img/activity/small/notre_dame_de_la_garde.jpg") 50% 50%;
+}
+.pic--15 {
+  background: url("../img/activity/small/parc_longchamp.jpg") 50% 50%;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes thumb {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+@keyframes thumb {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  padding-inline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* NAV */
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  height: 83px;
+}
+.nav__logo {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  padding-right: 1px;
+  background: no-repeat url("../img/reservia_logo.png");
+  background-size: 100px 50px;
+  width: 100px;
+  height: 60px;
+}
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  margin: 0;
+  text-align: center;
+}
+.nav__menu--btn {
+  width: 200px;
+  height: 60px;
+  padding-top: 20px;
+}
+.nav__menu--btn:hover {
+  border-top: 3px solid #0065FC;
+  color: #0065FC;
+  font-weight: bold;
+}
+
+/* SEARCH*/
+.search {
+  margin: 20px 0;
+  margin-left: 30px;
+}
+.search__title {
+  font-size: 1.5em;
+}
+.search__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 600px;
+  height: 50px;
+}
+.search__bar--icon {
+  width: 50px;
+  padding-top: 14px;
+  text-align: center;
+  background: #F2F2F2;
+  border-radius: 15px 0 0 15px;
+}
+.search__bar--area {
+  width: 210px;
+  padding-left: 20px;
+  border: 2px solid #F2F2F2;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.search__bar--area:focus {
+  border-style: none;
+}
+.search__bar--btn {
+  width: 150px;
+  background: #0065FC;
+  color: #fff;
+  font-size: 1.2em;
+  border: 0;
+  border-radius: 0 20px 20px 0;
+}
+.search__bar--btn:hover {
+  background-color: #3083ff;
+  font-size: 1.22em;
+}
+.search__bar--btn:active {
+  -webkit-box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+          box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* FILTER */
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0;
+  margin-left: 30px;
+  font-size: 1em;
+  font-weight: bold;
+}
+.filter__title {
+  width: 80px;
+  padding-top: 18px;
+}
+.filter__btn {
+  cursor: pointer;
+  width: auto;
+  margin-right: 20px;
+  padding-right: 15px;
+  text-align: center;
+  border: 1px solid #F2F2F2;
+  border-radius: 30px;
+}
+.filter__btn i {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #0065FC;
+  padding: 15px;
+  background: #DEEBFF;
+  border-radius: 50%;
+}
+.filter__btn:hover {
+  background: #0065FC;
+  color: #fff;
+  border-radius: 0 40px;
+}
+.filter__btn:active {
+  background: #3083ff;
+}
+.filter__btn:hover > i {
+  -webkit-animation: rotate 1000ms 1;
+          animation: rotate 1000ms 1;
+}
+.filter__txt {
+  width: 100%;
+  margin-top: 20px;
+  font-weight: lighter;
+}
+.filter__txt i {
+  margin-right: 15px;
+  padding: 5px 9px;
+  color: #0065FC;
+  border: 1px solid #F2F2F2;
+  border-radius: 50%;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* RESULT POPULAR */
+.result-popular {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* RESULT */
+.result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 65%;
+  background: #F2F2F2;
+  border-radius: 40px;
+}
+.result__title {
+  width: 100%;
+  margin-left: 45px;
+  font-size: 1.5em;
+}
+.result__thumb {
+  cursor: pointer;
+  width: 280px;
+  height: 190px;
+  background: #fff;
+  margin: 20px 10px;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 8px 0px #00000082;
+          box-shadow: 2px 2px 8px 0px #00000082;
+}
+.result__thumb:hover {
+  -webkit-animation: thumb 200ms ease-in-out both;
+          animation: thumb 200ms ease-in-out both;
+}
+.result__thumb--pic {
+  width: 96%;
+  height: 60%;
+  margin: 2%;
+  /* background: url("../img/hosting/small/auberge_la_cannebiere.jpg"); */
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+.result__thumb--name {
+  margin-left: 15px;
+  font-weight: bold;
+}
+.result__thumb--price {
+  margin-left: 15px;
+  font-size: 0.9em;
+}
+.result__thumb--star {
+  margin-left: 15px;
+  margin-top: 7px;
+  font-size: 13px;
+  color: #0065FC;
+}
+.result__thumb--star--grey {
+  color: #F2F2F2;
+}
+.result__txt {
+  width: 100%;
+  margin-left: 45px;
+  font-weight: bold;
+}
+
+/* POPULAR */
+.popular {
+  width: 30%;
+  background: #F2F2F2;
+  border-radius: 40px;
+}
+.popular__title {
+  margin-left: 25px;
+  font-size: 1.5em;
+}
+.popular__icon {
+  float: right;
+  margin-right: 30px;
+}
+.popular__thumb {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  height: 150px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 8px 0px #00000082;
+          box-shadow: 2px 2px 8px 0px #00000082;
+}
+.popular__thumb:hover {
+  -webkit-animation: thumb 200ms ease-in-out both;
+          animation: thumb 200ms ease-in-out both;
+}
+.popular__thumb--pic {
+  width: 35%;
+  height: 96%;
+  margin: 1%;
+  /* background: url("../img/hosting/small/hotel_le_soleil_du_matin.jpg"); */
+  background-size: cover;
+  border-radius: 20px 0 0 20px;
+}
+.popular__thumb__bloc {
+  width: 60%;
+}
+.popular__thumb__bloc--name {
+  margin: 15px;
+  font-weight: bold;
+}
+.popular__thumb__bloc--price {
+  margin: 15px;
+  font-size: 0.9em;
+}
+.popular__thumb__bloc--star {
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #0065FC;
+}
+.popular__thumb__bloc--star--grey {
+  color: #F2F2F2;
+}
+
+/* ACTIVITY */
+.activity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95%;
+  height: 500px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 30px;
+}
+.activity__title {
+  width: 100%;
+}
+.activity__thumb__medium {
+  cursor: pointer;
+  width: 22%;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 8px 0px #000000;
+          box-shadow: 2px 2px 8px 0px #000000;
+}
+.activity__thumb__medium:hover {
+  -webkit-animation: thumb 200ms ease-in-out both;
+          animation: thumb 200ms ease-in-out both;
+}
+.activity__thumb__medium--pic {
+  width: 100%;
+  height: 89%;
+  /* background: url("../img/activity/medium/vieux_port.jpg"); */
+  background-size: cover;
+}
+.activity__thumb__medium--name {
+  margin: 11px 15px;
+  font-weight: bold;
+}
+.activity__bloc {
+  /* DEUX SMALL */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 22%;
+  height: 400px;
+}
+.activity__thumb__small {
+  cursor: pointer;
+  height: 180px;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 8px 0px #000000;
+          box-shadow: 2px 2px 8px 0px #000000;
+}
+.activity__thumb__small:hover {
+  -webkit-animation: thumb 200ms ease-in-out both;
+          animation: thumb 200ms ease-in-out both;
+}
+.activity__thumb__small--pic {
+  width: 100%;
+  height: 76%;
+  /* background: url("../img/activity/small/ile_du_frioul.jpg"); */
+  background-size: cover;
+}
+.activity__thumb__small--name {
+  margin: 11px 15px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 210px;
+  margin-top: 20px;
+  background: #F2F2F2;
+}
+.footer__bloc {
+  width: 30%;
+  padding-top: 40px;
+}
+.footer__bloc--title {
+  font-weight: bold;
+}
+.footer__bloc__menu--btn {
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLFVBQUE7QUFDUSw2RkFBQTtBQUNSLHdDQUFBO0FBRUEsZUFBQTtBQTJCUTtFQUNJLHlFQW5CQTtBQ1BaO0FEeUJRO0VBQ0ksaUVBbkJBO0FDSlo7QURzQlE7RUFDSSxzRUFuQkE7QUNEWjtBRG1CUTtFQUNJLG1FQW5CQTtBQ0VaO0FEZ0JRO0VBQ0kscUVBbkJBO0FDS1o7QURhUTtFQUNJLG9FQW5CQTtBQ1FaO0FEVVE7RUFDSSw0RUFuQkE7QUNXWjtBRE9RO0VBQ0ksc0ZBbkJBO0FDY1o7QURJUTtFQUNJLDRFQW5CQTtBQ2lCWjtBRENRO0VBQ0ksK0RBbkJBO0FDb0JaO0FERlE7RUFDSSxxRUFuQkE7QUN1Qlo7QURMUTtFQUNJLGtFQW5CQTtBQzBCWjtBRFJRO0VBQ0ksZ0ZBbkJBO0FDNkJaO0FEWFE7RUFDSSwyRUFuQkE7QUNnQ1o7QURkUTtFQUNJLG1FQW5CQTtBQ21DWjs7QURQQTtFQUNJO0lBQ0ksK0JBQUE7WUFBQSx1QkFBQTtFQ1VOO0VEUkU7SUFDSSxpQ0FBQTtZQUFBLHlCQUFBO0VDVU47QUFDRjs7QURoQkE7RUFDSTtJQUNJLCtCQUFBO1lBQUEsdUJBQUE7RUNVTjtFRFJFO0lBQ0ksaUNBQUE7WUFBQSx5QkFBQTtFQ1VOO0FBQ0Y7QURQQTtFQUNJO0lBQ0ksMkJBQUE7WUFBQSxtQkFBQTtFQ1NOO0VEUEU7SUFDSSw4QkFBQTtZQUFBLHNCQUFBO0VDU047QUFDRjtBRGZBO0VBQ0k7SUFDSSwyQkFBQTtZQUFBLG1CQUFBO0VDU047RURQRTtJQUNJLDhCQUFBO1lBQUEsc0JBQUE7RUNTTjtBQUNGO0FETkE7RUFDSSxTQUFBO0VBQ0Esa0NBQUE7QUNRSjs7QUROQTtFQUNJLGlCQUFBO0FDU0o7O0FEUEE7RUFDSSxnQkFBQTtBQ1VKOztBRFBBO0VBQ0ksZ0JBQUE7RUFDQSxxQkFBQTtFQUNBLGNBL0RRO0FDeUVaOztBRE5BLFFB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 */
