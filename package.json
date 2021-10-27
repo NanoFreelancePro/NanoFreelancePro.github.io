@@ -1,7 +1,7 @@
 {
-  "name": "reservia",
+  "name": "partie-3-ohmyfood",
   "version": "1.0.0",
-  "description": "",
+  "description": "Troisième projet du parcours \"Développeur web\" chez OpenClassroom. L'objectif d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass",
   "main": "index.js",
   "scripts": {
     "sass":"sass --watch ./sass/main.scss:./public/css/style.css",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NanoFreelancePro/reservia.git"
+    "url": "git+https://github.com/NanoFreelancePro/partie-3-ohmyfood.git"
   },
   "author": "",
   "license": "ISC",
   "browserslist":"last 4 versions",
   "bugs": {
-    "url": "https://github.com/NanoFreelancePro/reservia/issues"
+    "url": "https://github.com/NanoFreelancePro/partie-3-ohmyfood/issues"
   },
-  "homepage": "https://github.com/NanoFreelancePro/reservia#readme"
+  "homepage": "https://github.com/NanoFreelancePro/partie-3-ohmyfood#readme"
 }
