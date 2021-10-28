@@ -1,0 +1,4 @@
+/* IMAGE mise avec une MAPS et une MIXINS juste pour m'entrainer de ne pas oublier, pas necessaire ds cette situation */
+.pic{
+    @include insert-pic($insert-pic)
+}

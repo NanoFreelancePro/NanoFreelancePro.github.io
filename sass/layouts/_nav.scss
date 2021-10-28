@@ -1,0 +1,30 @@
+/* NAVBAR */
+.nav{
+    &__logo{
+        height: auto;
+        margin: 0;
+        padding: 2rem;
+        font-family: 'Shrikhand', cursive;
+        font-size: 4em;
+        text-align: center;
+        & i{
+            float: left;
+            width: auto;
+            padding-top: 10px;
+        }
+    }
+    &__localisation{
+        height: auto;
+        margin: 0;
+        padding: 2.5rem;
+        background: $color-bg;
+        box-shadow: inset 0px 3px 7px 0px #00000040;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        & i{
+            padding-right: 50px;
+        }
+    }
+}

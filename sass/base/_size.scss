@@ -1,0 +1,13 @@
+/* GENERAL SIZE */
+body{
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    color: black;
+    &:link{
+        text-decoration: none;
+    }
+}

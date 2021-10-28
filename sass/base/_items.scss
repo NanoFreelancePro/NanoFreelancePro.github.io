@@ -1,0 +1,10 @@
+/* Selecteur pour faire apparaitres les images ou le menu en fondu */
+.item{
+    opacity: 0;
+    animation: menu-appear $anim-dur ease-in-out both;
+    @for $i from 1 through $num-items {
+        &-#{$i} {
+            animation-delay: $anim-delay * $i/2;
+        }
+    }
+}
