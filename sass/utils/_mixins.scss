@@ -1,8 +1,0 @@
-/* MIXINS */
-@mixin insert-pic ($insert-pic){
-    @each $num,$url in $insert-pic {
-        &-#{$num}{
-            background: $url;
-        }
-    }
-}

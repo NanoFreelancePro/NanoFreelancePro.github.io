@@ -1,21 +1,21 @@
 {
-  "name": "partie-3-ohmyfood",
+  "name": "nano-developpement",
   "version": "1.0.0",
-  "description": "Troisième projet du parcours \"Développeur web\" chez OpenClassroom. L'objectif d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch ./sass/main.scss:./public/css/style.css",
-    "prefix":"postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NanoFreelancePro/partie-3-ohmyfood.git"
+    "url": "git+https://github.com/NanoFreelancePro/nano-developpement.git"
   },
   "author": "",
   "license": "ISC",
-  "browserslist":"last 4 versions",
+  "browserslist": "last 4 versions",
   "bugs": {
-    "url": "https://github.com/NanoFreelancePro/partie-3-ohmyfood/issues"
+    "url": "https://github.com/NanoFreelancePro/nano-developpement/issues"
   },
-  "homepage": "https://github.com/NanoFreelancePro/partie-3-ohmyfood#readme"
+  "homepage": "https://github.com/NanoFreelancePro/nano-developpement#readme"
 }
