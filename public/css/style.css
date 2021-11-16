@@ -85,5 +85,39 @@ a {
 
 /* DIAPO */
 /* PRESENTATION */
+.presentation {
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.presentation__pic {
+  width: 50%;
+  object-fit: cover;
+}
+.presentation__txt {
+  text-align: center;
+  color: #100384;
+}
+.presentation__txt--name {
+  font-size: 3rem;
+}
+.presentation__txt--job {
+  font-size: 2.5rem;
+}
+.presentation__txt--description {
+  padding: 30px;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+.presentation__txt--btn {
+  margin-top: 100px;
+  padding: 15px 30px;
+  font-size: 2rem;
+  background: #0a0252;
+  color: #fff;
+  border-style: none;
+  border-radius: 50px;
+}
 
 /*# sourceMappingURL=style.css.map */

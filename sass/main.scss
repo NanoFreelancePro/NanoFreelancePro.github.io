@@ -93,3 +93,37 @@ a {
 /* DIAPO */
 
 /* PRESENTATION */
+.presentation {
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  &__pic {
+    width: 50%;
+    object-fit: cover;
+  }
+  &__txt {
+    text-align: center;
+    color: lighten($color-1, 10);
+    &--name {
+      font-size: 3rem;
+    }
+    &--job {
+      font-size: 2.5rem;
+    }
+    &--description {
+      padding: 30px;
+      font-size: 1.3rem;
+      text-align: justify;
+    }
+    &--btn {
+      margin-top: 100px;
+      padding: 15px 30px;
+      font-size: 2rem;
+      background: $color-1;
+      color: $color-txt;
+      border-style: none;
+      border-radius: 50px;
+    }
+  }
+}
