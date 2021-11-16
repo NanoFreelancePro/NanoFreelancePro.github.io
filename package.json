@@ -1,5 +1,5 @@
 {
-  "name": "nano-developpement",
+  "name": "nanofreelancepro.github.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NanoFreelancePro/nano-developpement.git"
+    "url": "git+https://github.com/NanoFreelancePro/NanoFreelancePro.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "browserslist": "last 4 versions",
   "bugs": {
-    "url": "https://github.com/NanoFreelancePro/nano-developpement/issues"
+    "url": "https://github.com/NanoFreelancePro/NanoFreelancePro.github.io/issues"
   },
-  "homepage": "https://github.com/NanoFreelancePro/nano-developpement#readme"
+  "homepage": "https://github.com/NanoFreelancePro/NanoFreelancePro.github.io#readme"
 }
