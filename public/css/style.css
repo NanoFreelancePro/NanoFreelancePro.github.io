@@ -28,6 +28,10 @@
 background: rgb(118,27,143);
 background: linear-gradient(90deg, rgba(118,27,143,1) 0%, rgba(103,142,181,1) 50%, rgba(168,171,134,1) 100%); */
 /* GENERAL SIZE */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -38,13 +42,12 @@ a {
   color: #fff;
 }
 
-/* EN TETE */
 .header {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-size: cover;
-  animation: diapo 25000ms ease-in-out infinite both;
+  background: fixed center/cover;
+  animation: diapo 50000ms ease-in-out infinite both;
 }
 .header__title {
   position: absolute;
@@ -107,7 +110,6 @@ a {
   opacity: 0.8;
 }
 
-/* PRESENTATION */
 .presentation {
   display: flex;
   justify-content: center;
@@ -130,8 +132,8 @@ a {
   left: -25px;
   width: 250px;
   height: 250px;
-  border-top: 15px solid #0a0252;
-  border-left: 15px solid #0a0252;
+  border-top: 10px solid #0a0252;
+  border-left: 10px solid #0a0252;
   border-radius: 95px 0 0 0;
 }
 .presentation__container::after {
@@ -141,8 +143,8 @@ a {
   bottom: -40px;
   width: 250px;
   height: 250px;
-  border-right: 15px solid #78c0e0;
-  border-bottom: 15px solid #78c0e0;
+  border-right: 10px solid #78c0e0;
+  border-bottom: 10px solid #78c0e0;
   border-radius: 0 0 95px 0;
 }
 .presentation__container__pic {
@@ -166,7 +168,7 @@ a {
 .presentation__container__txt--description {
   margin: 0;
   padding: 20px 50px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: justify;
 }
 .presentation__container__txt--description::before {
@@ -189,119 +191,26 @@ a {
   border-radius: 10px;
 }
 
-/* PRESTATIONS */
-.prestation {
-  height: 100vh;
-  margin: 0 auto;
-  overflow: hidden;
-  background: #0a0252;
-  color: #fff;
-}
-.prestation__title {
-  width: 100%;
-  height: auto;
-  margin: 30px auto 0;
-  text-align: center;
-  font-size: 3rem;
-}
-.prestation__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-evenly;
-  height: 90vh;
-}
-.prestation__container__thumb {
-  display: flex;
-  width: 45%;
-  min-width: 558px;
-  height: 300px;
-  background: #0a0252;
-  border-radius: 50px;
-  overflow: hidden;
-  /* &:hover {
-    transform: scale(1.01);
-    transition: 200ms ease-in-out;
-  } */
-}
-.prestation__container__thumb--pic {
-  width: 35%;
-  object-fit: cover;
-}
-.prestation__container__thumb__right {
-  position: relative;
-  padding: 10px;
-  text-align: center;
-  color: #0a0252;
-  background: #fff;
-  /* background: rgb(255, 255, 255);
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(10, 2, 82, 1) 100%
-  ); */
-}
-.prestation__container__thumb__right--txt {
-  font-size: 1rem;
-}
-.prestation__container__thumb__right--btn {
-  position: absolute;
-  bottom: 10px;
-  right: 50%;
-  transform: translateX(50%);
-  padding: 15px;
-  background: #0a0252;
-  font-family: "Montserrat", sans-serif;
-  color: #fff;
-  border-style: none;
-  border-radius: 10px;
-}
-
-/* TRANSITIONS */
 .transition {
-  position: relative;
-  display: flex;
-  align-items: center;
+  margin: 100px 0;
   width: 100%;
-  height: 100px;
-  background: #13125e;
+  height: 50vh;
+  background: url("../../public/img/transition/pexels-oleg-gurin-3695476.jpg") center/cover;
 }
-.transition__pic {
-  width: 100px;
-}
-.transition__trait {
-  width: 90%;
-  height: 1px;
-  background: #abb8a2;
-  background: linear-gradient(90deg, #abb8a2 0%, #8146ab 100%);
-}
-.transition__trait::before {
-  content: "6miq";
-  position: absolute;
-  top: 5px;
-  right: 50%;
-  transform: translateX(50%);
-  font-family: "Montserrat", sans-serif;
+.transition__title {
+  margin: 15px 40px;
+  padding: 10px;
   color: #fff;
-  font-size: 2rem;
+  font-size: 6rem;
+  text-shadow: 1px 3px 2px black;
 }
-.transition__trait::after {
-  content: "Let the music play !";
-  position: absolute;
-  bottom: 5px;
-  right: 50%;
-  transform: translateX(50%);
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+.transition__title--left {
+  text-align: left;
+}
+.transition__title--right {
+  text-align: right;
 }
 
-/* PRESTATIONS 2 */
-/* PRESTATIONS 2 */
-/* PRESTATIONS 2 */
-/* PRESTATIONS 2 */
-/* PRESTATIONS 2 */
 .prest {
   height: 100vh;
   margin: 0 auto;
@@ -339,24 +248,24 @@ a {
 .prest__container__thumb::before {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 220px;
-  height: 220px;
+  top: -5px;
+  left: -5px;
+  width: 150px;
+  height: 150px;
   border-top: 10px solid #0a0252;
   border-left: 10px solid #0a0252;
-  border-radius: 95px 0 0 0;
+  border-radius: 70px 0 0 0;
 }
 .prest__container__thumb::after {
   content: "";
   position: absolute;
-  right: 0px;
-  bottom: 0px;
-  width: 220px;
-  height: 220px;
+  right: -5px;
+  bottom: -5px;
+  width: 150px;
+  height: 150px;
   border-right: 10px solid #78c0e0;
   border-bottom: 10px solid #78c0e0;
-  border-radius: 0 0 95px 0;
+  border-radius: 0 0 70px 0;
 }
 .prest__container__thumb--title {
   margin: 10px;
@@ -369,12 +278,13 @@ a {
   width: 85%;
   height: 30%;
   margin: 0px auto;
+  border-radius: 4px;
 }
 .prest__container__thumb--txt {
   height: 315px;
   margin: 30px auto;
   padding: 0 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   overflow: hidden;
   white-space: pre-line;
   text-overflow: ellipsis;
@@ -392,13 +302,10 @@ a {
   border-radius: 10px;
 }
 
-/* MAIN HEADER */
 .main__header {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../../public/img/logo/logo-complete.JPG");
-  background-size: cover;
 }
 .main__header__bar {
   display: flex;
@@ -449,33 +356,17 @@ a {
   opacity: 0.8;
 }
 
-/* BTN MENU ACTIVE */
 #contact {
   font-weight: bold;
   border-bottom: 3px solid #fff;
 }
 
-/* CONTACT */
-.contact {
-  height: 100vh;
-}
-.contact__title {
-  width: 395px;
-  height: auto;
-  margin: 0px auto;
-  padding: 30px 0 10px;
-  color: #0a0252;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 2.5rem;
-  border-bottom: 7px solid #78c0e0;
-}
 .contact__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: 88vh;
+  height: 85vh;
 }
 .contact__container__thumb {
   position: relative;
@@ -519,7 +410,8 @@ a {
 }
 .contact__container__thumb--txt {
   padding: 20px;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
+  align-items: center;
 }
 .contact__container__thumb--txt::before {
   content: "❝ ";
