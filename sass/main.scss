@@ -56,18 +56,56 @@ a {
 // ----------------------------------------------------
 //                    EN TETE
 // ----------------------------------------------------
-
+#target {
+  position: absolute;
+  top: 55vh;
+  left: 35%;
+  width: 100%;
+  margin: 0 auto;
+  color: $color-txt;
+  font-size: 6rem;
+  text-align: left;
+  text-shadow: 1px 3px 2px black;
+  opacity: 0.8;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: -10px;
+    width: 5px;
+    height: 6rem;
+    background: $color-txt;
+    text-shadow: 1px 3px 2px black;
+    transform: translateY(-4px);
+    animation: anim 0.8s linear infinite;
+  }
+}
+@keyframes anim {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 .header {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: fixed center/cover;
-  animation: diapo 50000ms ease-in-out infinite both;
+  background: url("../../public/img/diapo/pexels-erik-mclean-4062563.jpg") fixed
+    center/cover;
   &__title {
     position: absolute;
     top: 40vh;
-    left: 10%;
-    right: 10%;
+    width: 100%;
     margin: 0 auto;
     color: $color-txt;
     font-size: 6rem;
@@ -79,7 +117,9 @@ a {
     display: flex;
     justify-content: space-between;
     background: $color-1;
-    opacity: 0.8;
+    opacity: 0;
+    animation: anim-menu 3000ms ease-in-out both;
+    transition: 6000ms;
     &--logo {
       width: 200px;
       margin: 10px;
@@ -102,10 +142,8 @@ a {
         font-family: $font-1;
         font-size: 1.2rem;
         text-align: center;
-        border-bottom: 2px solid $color-1;
         &:hover {
           font-weight: bold;
-          border-bottom: 3px solid $color-txt;
         }
       }
     }
@@ -269,29 +307,33 @@ a {
       background: $color-txt;
       color: $color-1;
       text-align: center;
-      border-radius: 95px 0px 95px 0px;
-      &::before {
-        content: "";
-        position: absolute;
-        top: -5px;
-        left: -5px;
-        width: 150px;
-        height: 150px;
-        border-top: 10px solid $color-1;
-        border-left: 10px solid $color-1;
-        border-radius: 70px 0 0 0;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        right: -5px;
-        bottom: -5px;
-        width: 150px;
-        height: 150px;
-        border-right: 10px solid $color-2;
-        border-bottom: 10px solid $color-2;
-        border-radius: 0 0 70px 0;
-      }
+      border-radius: 95px;
+      border-top: 5px solid $color-1;
+      border-left: 5px solid $color-1;
+      border-right: 5px solid $color-2;
+      border-bottom: 5px solid $color-2;
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: -5px;
+      //   left: -5px;
+      //   width: 150px;
+      //   height: 150px;
+      //   border-top: 10px solid $color-1;
+      //   border-left: 10px solid $color-1;
+      //   border-radius: 70px 0 0 0;
+      // }
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   right: -5px;
+      //   bottom: -5px;
+      //   width: 150px;
+      //   height: 150px;
+      //   border-right: 10px solid $color-2;
+      //   border-bottom: 10px solid $color-2;
+      //   border-radius: 0 0 70px 0;
+      // }
       &--title {
         margin: 10px;
         font-size: 1.5rem;
