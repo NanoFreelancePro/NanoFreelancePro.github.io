@@ -4,29 +4,45 @@
 /* font-family: 'Montserrat', sans-serif; */
 /* Variables */
 /* KEYFRAMES */
-@keyframes diapo {
-  0% {
-    background-image: url("../../public/img/diapo/pexels-cesar-de-miranda-2381596.jpg");
-  }
-  20% {
-    background-image: url("../../public/img/diapo/pexels-erik-mclean-4062563.jpg");
-  }
-  40% {
-    background-image: url("../../public/img/diapo/pexels-gaby-tenda-2123606.jpg");
-  }
-  60% {
-    background-image: url("../../public/img/diapo/pexels-mikky-koopac-625644.jpg");
-  }
-  80% {
-    background-image: url("../../public/img/diapo/pexels-thor-garlan-3432039.jpg");
+@keyframes anim {
+  50% {
+    opacity: 0.1;
   }
   100% {
-    background-image: url("../../public/img/diapo/pexels-cesar-de-miranda-2381596.jpg");
+    opacity: 1;
   }
 }
-/* gradiant
-background: rgb(118,27,143);
-background: linear-gradient(90deg, rgba(118,27,143,1) 0%, rgba(103,142,181,1) 50%, rgba(168,171,134,1) 100%); */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes heartbeat {
+  from {
+    transform: translateX(50%) scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  5% {
+    transform: translateX(50%) scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  8% {
+    transform: translateX(50%) scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  16% {
+    transform: translateX(50%) scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  22% {
+    transform: translateX(50%) scale(1);
+    animation-timing-function: ease-out;
+  }
+}
 /* GENERAL SIZE */
 * {
   box-sizing: border-box;
@@ -46,7 +62,7 @@ a {
   position: absolute;
   top: 55vh;
   left: 35%;
-  width: 100%;
+  width: auto;
   margin: 0 auto;
   color: #fff;
   font-size: 6rem;
@@ -67,22 +83,6 @@ a {
   animation: anim 0.8s linear infinite;
 }
 
-@keyframes anim {
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes anim-menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.8;
-  }
-}
 .header {
   position: relative;
   width: 100%;
@@ -109,7 +109,7 @@ a {
   transition: 6000ms;
 }
 .header__bar--logo {
-  width: 200px;
+  width: 150px;
   margin: 10px;
 }
 .header__bar--logo img {
@@ -120,17 +120,17 @@ a {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 700px;
-  margin-right: 20px;
+  width: 500px;
 }
 .header__bar--menu--btn {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 150px;
   height: 30px;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
-  text-align: center;
 }
 .header__bar--menu--btn:hover {
   font-weight: bold;
@@ -158,43 +158,25 @@ a {
 }
 .presentation__container {
   display: flex;
+  justify-content: space-around;
   position: relative;
   width: 90%;
-  max-width: 900px;
   height: 60vh;
   padding: 20px;
 }
-.presentation__container::before {
-  content: "";
-  position: absolute;
-  top: -23px;
-  left: -25px;
-  width: 250px;
-  height: 250px;
-  border-top: 10px solid #0a0252;
-  border-left: 10px solid #0a0252;
-  border-radius: 95px 0 0 0;
-}
-.presentation__container::after {
-  content: "";
-  position: absolute;
-  right: 20px;
-  bottom: -40px;
-  width: 250px;
-  height: 250px;
-  border-right: 10px solid #78c0e0;
-  border-bottom: 10px solid #78c0e0;
-  border-radius: 0 0 95px 0;
-}
 .presentation__container__pic {
-  width: 35%;
+  width: 40%;
   object-fit: cover;
   border-radius: 50px;
 }
 .presentation__container__txt {
+  width: 50%;
   position: relative;
+  padding: 10px;
   text-align: center;
   color: #0a0252;
+  border: 3px dotted #0a0252;
+  border-radius: 90px;
 }
 .presentation__container__txt--name {
   margin: 0;
@@ -205,10 +187,13 @@ a {
   font-size: 2.5rem;
 }
 .presentation__container__txt--description {
-  margin: 0;
-  padding: 20px 50px;
+  max-width: 500px;
+  min-width: 415px;
+  margin: 0 auto;
+  padding: 10px 0px;
   font-size: 1rem;
   text-align: justify;
+  letter-spacing: 1px;
 }
 .presentation__container__txt--description::before {
   content: "❝ ";
@@ -218,9 +203,10 @@ a {
 }
 .presentation__container__txt--btn {
   position: absolute;
-  bottom: -10px;
+  bottom: 20px;
   right: 50%;
   transform: translateX(50%);
+  transform-origin: center center;
   padding: 10px 15px;
   font-size: 1.2rem;
   background: #0a0252;
@@ -228,33 +214,50 @@ a {
   color: #fff;
   border-style: none;
   border-radius: 10px;
+  animation: heartbeat 3s ease-in-out infinite both;
 }
 
 .transition {
+  overflow: hidden;
+  position: relative;
   margin: 100px 0;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   background: url("../../public/img/transition/pexels-oleg-gurin-3695476.jpg") center/cover;
 }
 .transition__title {
-  margin: 15px 40px;
-  padding: 10px;
+  margin: 0;
   color: #fff;
   font-size: 6rem;
   text-shadow: 1px 3px 2px black;
 }
-.transition__title--left {
-  text-align: left;
+
+#transition__title--1 {
+  position: absolute;
+  top: 15vh;
+  left: 100px;
+  transform: translateX(-500px);
+  transition: 400ms;
 }
-.transition__title--right {
-  text-align: right;
+#transition__title--2 {
+  position: absolute;
+  top: 40vh;
+  right: 100px;
+  transform: translateX(500px);
+  transition: 400ms;
+}
+#transition__title--3 {
+  position: absolute;
+  bottom: 15vh;
+  left: 100px;
+  transform: translateX(-500px);
+  transition: 400ms;
 }
 
 .prest {
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;
-  background: #fff;
   color: #0a0252;
 }
 .prest__title {
@@ -270,23 +273,20 @@ a {
 .prest__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   height: 88vh;
 }
 .prest__container__thumb {
   position: relative;
-  width: 20%;
-  height: 80%;
+  width: 45%;
+  height: 30vh;
   padding: 20px;
   background: #fff;
   color: #0a0252;
   text-align: center;
-  border-radius: 95px;
-  border-top: 5px solid #0a0252;
-  border-left: 5px solid #0a0252;
-  border-right: 5px solid #78c0e0;
-  border-bottom: 5px solid #78c0e0;
+  border-radius: 80px;
+  border: 3px dotted #0a0252;
 }
 .prest__container__thumb--title {
   margin: 10px;
@@ -294,15 +294,19 @@ a {
   text-align: center;
   text-overflow: ellipsis;
 }
-.prest__container__thumb--pic {
+.prest__container__thumb__middle {
+  display: flex;
+  height: 55%;
+}
+.prest__container__thumb__middle--pic {
   object-fit: cover;
-  width: 85%;
-  height: 30%;
+  width: 30%;
+  height: 100%;
   margin: 0px auto;
   border-radius: 4px;
 }
-.prest__container__thumb--txt {
-  height: 315px;
+.prest__container__thumb__middle--txt {
+  width: 70%;
   margin: 30px auto;
   padding: 0 10px;
   font-size: 1rem;
@@ -311,10 +315,7 @@ a {
   text-overflow: ellipsis;
 }
 .prest__container__thumb--btn {
-  position: absolute;
-  bottom: 30px;
-  right: 50%;
-  transform: translateX(50%);
+  margin: 0px auto;
   padding: 15px;
   background: #0a0252;
   font-family: "Montserrat", sans-serif;
