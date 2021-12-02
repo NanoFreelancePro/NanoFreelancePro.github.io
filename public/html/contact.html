@@ -30,18 +30,57 @@
     <div class="main__header__bar">
         <!-- LOGO -->
         <a href="../../index.html" class="main__header__bar--logo">
-            <img src="../../public/img//logo/logo-vertical.png" alt="Logo du DJ 6miq">
+            <img src="../img//logo/logo-vertical.png" alt="Logo du DJ 6miq">
         </a>
         <!-- MENU -->
         <nav class="main__header__bar--menu">
-                <a href="#presentation" class="main__header__bar--menu--btn"><p>Présentation</p></a>
+                <a href="#presentation" class="main__header__bar--menu--btn"><p>Qui suis-je ?</p></a>
                 <a href="#prestations" class="main__header__bar--menu--btn"><p>Prestations</p></a>
-                <a href="#" class="main__header__bar--menu--btn"><p>Réalisations</p></a>
-                <a href="#" class="main__header__bar--menu--btn"><p>Tarifs</p></a>
-                <a href="./contact.html" id="contact" class="main__header__bar--menu--btn"><p>Contact</p></a>
+                <a href="./public/html/contact.html" id="active" class="main__header__bar--menu--btn"><p>Contact</p></a>
         </nav>
     </div>
-    <a href="../../index.html"><i class="fas fa-home main__header__home"></i></a>
+    <a href="#"><i class="fas fa-home main__header__home"></i></a>
+    <!-- FORMULAIRE -->
+    <form class="form" action="">
+        <div class="form__container parent">
+            <label class="form__name" for="last-name">Nom</label>
+            <input class="form__input" type="text" name="" id="last-name" autocomplete="off">
+        </div>
+        <div class="form__container parent">
+            <label class="form__name" for="first-name">Prénom</label>
+            <input class="form__input" type="text" name="" id="first-name" autocomplete="off">
+        </div>
+        <div class="form__container parent">
+            <label class="form__name" for="email">Email</label>
+            <input class="form__input" type="email" name="" id="email" autocomplete="off">
+        </div>
+        <div class="form__container parent">
+            <label class="form__name" for="date">Date</label>
+            <input class="form__input" type="date" name="" id="date" autocomplete="off" min="2021-12-01">
+        </div>
+        <div class="form__container parent">
+            <label class="form__name" for="lieu">Lieu</label>
+            <input class="form__input" type="text" name="" id="lieu" autocomplete="off">
+        </div>
+        <div class="form__choice parent">
+            <label class="form__name" for="choice">Type de prestations</label>
+            <select class="form__input" id="choice">
+                <option value="">-- Séléctionnez le type de prestations --</option>
+                <option value="">Anniversaire</option>
+                <option value="">Entreprise</option>
+                <option value="">Événement</option>
+                <option value="">Mariage</option>
+                <option value="">Autres</option>
+            </select>
+        </div>
+        <div class="form__txt parent">
+            <label for="message">Entrez votre message</label>
+            <textarea name="" id="message" cols="30" rows="1"></textarea>
+        </div>
+        <div class="parent">
+            <input class="form__btn" type="submit" value="ENVOYEZ">
+        </div>
+    </form>
     <!-- CONTACT -->
     <section class="contact">
         <div class="contact__container">
@@ -61,7 +100,7 @@
                 <p class="contact__container__thumb--link">User : 6miqmg</p>
             </a>
             <a href="" class="contact__container__thumb">
-                <p class="contact__container__thumb--txt">Un petit texte du genre, n'hesitez pas à m'appeler pour m'expliquer votre projet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa magnam corporis iste vel consequuntur rerum soluta repudiandae. Expedita, officiis quaerat?</p>
+                <p class="contact__container__thumb--txt">Un petit texte du genre, n'hesitez pas à m'appeler pour m'expliquer votre projet.</p>
             </a>
         </div>
     </section>

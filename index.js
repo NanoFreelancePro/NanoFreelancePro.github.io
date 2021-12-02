@@ -49,23 +49,28 @@ loop();
 const title1 = document.getElementById("transition__title--1");
 const title2 = document.getElementById("transition__title--2");
 const title3 = document.getElementById("transition__title--3");
+const btnHome = document.querySelector(".header__home");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 1600) {
+  scrollValue =
+    (window.innerHeight + window.scrollY) / document.body.offsetHeight;
+  // console.log(scrollValue);
+  if (scrollValue > 0.265) {
+    btnHome.style.opacity = "1";
+  } else {
+    btnHome.style.opacity = "0";
+  }
+  if (scrollValue > 0.64) {
     title1.style.transform = "translateX(0px)";
-    title2.style.transform = "translateX(0px)";
-    title3.style.transform = "translateX(0px)";
   } else {
     title1.style.transform = "translateX(-500px)";
-    title2.style.transform = "translateX(500px)";
-    title3.style.transform = "translateX(-500px)";
   }
-  if (window.scrollY > 1800) {
+  if (scrollValue > 0.7) {
     title2.style.transform = "translateX(0px)";
   } else {
     title2.style.transform = "translateX(500px)";
   }
-  if (window.scrollY > 1950) {
+  if (scrollValue > 0.74) {
     title3.style.transform = "translateX(0px)";
   } else {
     title3.style.transform = "translateX(-500px)";
