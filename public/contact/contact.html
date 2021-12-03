@@ -34,38 +34,42 @@
         </a>
         <!-- MENU -->
         <nav class="main__header__bar--menu">
-                <a href="#presentation" class="main__header__bar--menu--btn"><p>Qui suis-je ?</p></a>
-                <a href="#prestations" class="main__header__bar--menu--btn"><p>Prestations</p></a>
-                <a href="./public/html/contact.html" id="active" class="main__header__bar--menu--btn"><p>Contact</p></a>
+                <a href="../../index.html#presentation" class="main__header__bar--menu--btn"><p>Qui suis-je ?</p></a>
+                <a href="../prestations/prestations.html" class="main__header__bar--menu--btn"><p>Prestations</p></a>
+                <a href="#" id="active" class="main__header__bar--menu--btn"><p>Contact</p></a>
         </nav>
     </div>
     <a href="#"><i class="fas fa-home main__header__home"></i></a>
     <!-- FORMULAIRE -->
-    <form class="form" action="">
-        <div class="form__container parent">
-            <label class="form__name" for="last-name">Nom</label>
-            <input class="form__input" type="text" name="" id="last-name" autocomplete="off">
+    <form class="form parent" action="">
+        <div class="form__container lastName">
+            <label class="form__name" for="lastName">Nom</label>
+            <input class="form__input" type="text" name="lastName" id="lastName" autocomplete="off" required>
         </div>
-        <div class="form__container parent">
-            <label class="form__name" for="first-name">Prénom</label>
-            <input class="form__input" type="text" name="" id="first-name" autocomplete="off">
+        <div class="form__container firstName">
+            <label class="form__name" for="firstName">Prénom</label>
+            <input class="form__input" type="text" name="firstName" id="firstName" autocomplete="off" required>
         </div>
-        <div class="form__container parent">
+        <div class="form__container email">
             <label class="form__name" for="email">Email</label>
-            <input class="form__input" type="email" name="" id="email" autocomplete="off">
+            <input class="form__input" type="email" name="email" id="email" autocomplete="off" required>
         </div>
-        <div class="form__container parent">
-            <label class="form__name" for="date">Date</label>
-            <input class="form__input" type="date" name="" id="date" autocomplete="off" min="2021-12-01">
+        <div class="form__container phone">
+            <label class="form__name" for="phone">Téléphone</label>
+            <input class="form__input" type="tel" name="phone" id="phone" min="10" autocomplete="off" required placeholder="Format : 0658121477 (10 Chiffres)" pattern="[0-9]{10}">
         </div>
-        <div class="form__container parent">
+        <div class="form__container date">
+            <label class="form__name" for="date">Date de l'événement</label>
+            <input class="form__input" type="date" name="date" id="date" autocomplete="off" min="2022-01-01" required>
+        </div>
+        <div class="form__container lieu">
             <label class="form__name" for="lieu">Lieu</label>
-            <input class="form__input" type="text" name="" id="lieu" autocomplete="off">
+            <input class="form__input" type="text" name="localisation" id="lieu" autocomplete="off" required placeholder="Ex : Lyon 69000">
         </div>
-        <div class="form__choice parent">
+        <div class="form__choice presta">
             <label class="form__name" for="choice">Type de prestations</label>
-            <select class="form__input" id="choice">
-                <option value="">-- Séléctionnez le type de prestations --</option>
+            <select class="form__input" id="choice" required>
+                <option value="">Séléctionnez le type de prestations</option>
                 <option value="">Anniversaire</option>
                 <option value="">Entreprise</option>
                 <option value="">Événement</option>
@@ -73,13 +77,16 @@
                 <option value="">Autres</option>
             </select>
         </div>
-        <div class="form__txt parent">
+        <div class="form__container guest">
+            <label class="form__name" for="guests">Nombre d'invités : </label>
+            <input type="text" id="numberOfGuests" value="100" readonly>
+            <input class="form__input" type="range" name="numberOfGuests" id="guests" min="1" max="1000" value="100" autocomplete="off" required oninput="document.getElementById('numberOfGuests').value=this.value">
+        </div>
+        <div class="form__txt txt">
             <label for="message">Entrez votre message</label>
-            <textarea name="" id="message" cols="30" rows="1"></textarea>
+            <textarea name="txtArea" id="message" cols="30" rows="1" placeholder="Écrivez votre message ici..."></textarea>
         </div>
-        <div class="parent">
-            <input class="form__btn" type="submit" value="ENVOYEZ">
-        </div>
+        <input class="form__btn btn" type="submit" value="ENVOYER">
     </form>
     <!-- CONTACT -->
     <section class="contact">
@@ -99,11 +106,25 @@
                 <h2 class="contact__container__thumb--type">INSTAGRAM</h2>
                 <p class="contact__container__thumb--link">User : 6miqmg</p>
             </a>
-            <a href="" class="contact__container__thumb">
-                <p class="contact__container__thumb--txt">Un petit texte du genre, n'hesitez pas à m'appeler pour m'expliquer votre projet.</p>
+            <a href="https://www.google.fr/maps/@45.7521653,4.8100898,12z?hl=fr&authuser=0" class="contact__container__thumb" target="blank">
+                <i class="fas fa-map-marker-alt contact__container__thumb--logo"></i>
+                <h2 class="contact__container__thumb--type">LOCALISATION</h2>
+                <p class="contact__container__thumb--link">LYON (69)</p>
             </a>
+            
         </div>
     </section>
-    </header> 
+</header> 
+<!-------------------------------------------->
+<!--                FOOTER                  -->
+<!-------------------------------------------->
+<footer class="foot">
+    <p class="foot__txt">© 2022 DJ 6miq - Création : Alejandro Fernandez | 
+    <a href="">Mentions Légales</a> | 
+    <a href="">Confidentialité</a> 
+    </p>
+</footer>
+
+    <script src="./contact.js"></script>
 </body>
 </html>

@@ -14,7 +14,22 @@ $color-7: #8146ab;
 $color-8: #f0f5ff;
 $color-txt: #fff;
 
+// MAPS
+@mixin btn-hover {
+  font-weight: bold;
+  transform: scale(1.05);
+  background: lighten($color-1, 5);
+}
+@mixin btn-active {
+  background: darken($color-1, 5);
+}
+
 /* KEYFRAMES */
+@keyframes btn-hover {
+  100% {
+    @include btn-hover();
+  }
+}
 @keyframes anim {
   50% {
     opacity: 0.1;
@@ -55,6 +70,18 @@ $color-txt: #fff;
   }
 }
 
+@keyframes pulsate-fwd {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* GENERAL SIZE */
 * {
   box-sizing: border-box;
@@ -85,7 +112,7 @@ a {
   font-size: 6rem;
   text-align: left;
   text-shadow: 1px 3px 2px black;
-  opacity: 0.8;
+  opacity: 0.9;
   &::after {
     content: "";
     position: absolute;
@@ -103,9 +130,10 @@ a {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../../public/img/diapo/pexels-erik-mclean-4062563.jpg") fixed
+  background: url("../../public/img/pexels-energepiccom-2988289.jpg") fixed
     center/cover;
   overflow: hidden;
+  box-shadow: 0px 0px 20px 0px #000;
   &__title {
     position: absolute;
     top: 40vh;
@@ -115,7 +143,7 @@ a {
     font-size: 6rem;
     text-align: center;
     text-shadow: 1px 3px 2px black;
-    opacity: 0.8;
+    opacity: 0.9;
   }
   &__bar {
     display: flex;
@@ -187,15 +215,16 @@ a {
     &__pic {
       width: 40%;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 50px;
+      box-shadow: 3px 3px 20px 0px #000000;
     }
     &__txt {
       width: 50%;
       padding: 10px;
       text-align: center;
       color: $color-1;
-      border: 3px solid $color-1;
       border-radius: 75px;
+      box-shadow: 3px 3px 8px 0px #0a0252;
       &--name {
         margin: 0;
         font-size: 3rem;
@@ -229,6 +258,14 @@ a {
         border-style: none;
         border-radius: 10px;
         animation: heartbeat 3s ease-in-out infinite both;
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+        &:hover {
+          animation: btn-hover 300ms ease-in-out both;
+        }
+        &:active {
+          @include btn-active();
+        }
       }
     }
   }
@@ -243,13 +280,13 @@ a {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../../public/img/transition/pexels-oleg-gurin-3695476.jpg")
-    center/cover;
+  background: url("../../public/img/pexels-oleg-gurin-3695476.jpg") center/cover;
+  box-shadow: 0px 0px 20px 0px #000;
   &__title {
     margin: 0;
     color: $color-txt;
     font-size: 6rem;
-    text-shadow: 1px 3px 2px black;
+    text-shadow: 6px 6px 7px #000;
   }
 }
 #transition__title {
@@ -308,7 +345,7 @@ a {
       color: $color-1;
       text-align: center;
       border-radius: 75px;
-      border: 3px solid $color-1;
+      box-shadow: 3px 3px 8px 0px #0a0252;
       &--title {
         margin: 10px;
         font-size: 1.5rem;
@@ -345,6 +382,13 @@ a {
         border-style: none;
         border-radius: 10px;
         animation: heartbeat 3s ease-in-out infinite both;
+        cursor: pointer;
+        &:hover {
+          animation: btn-hover 300ms ease-in-out both;
+        }
+        &:active {
+          @include btn-active();
+        }
       }
     }
   }
@@ -357,9 +401,9 @@ a {
 .main__header {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   overflow: hidden;
-  background: url("../../public/img/contact/pexels-hendrik-b-744318.jpg")
+  background: url("../../public/contact/img/pexels-hendrik-b-744318.jpg")
     center/cover;
   &__bar {
     display: flex;
@@ -421,83 +465,128 @@ a {
 //                      FORMULAIRE
 // ----------------------------------------------------
 .parent {
-  &:nth-child(1) {
-    grid-area: 1;
-  }
-  &:nth-child(2) {
-    grid-area: 2;
-  }
-  &:nth-child(3) {
-    grid-area: 3;
-  }
-  &:nth-child(4) {
-    grid-area: 4;
-  }
-  &:nth-child(5) {
-    grid-area: 5;
-  }
-  &:nth-child(6) {
-    grid-area: 6;
-  }
-  &:nth-child(7) {
-    grid-area: 7;
-  }
-  &:nth-child(8) {
-    grid-area: 8;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 2fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "lastName firstName"
+    "email phone"
+    "date lieu"
+    "presta guest"
+    "txt txt"
+    "btn btn";
+}
+.lastName {
+  grid-area: lastName;
+}
+.firstName {
+  grid-area: firstName;
+}
+.email {
+  grid-area: email;
+}
+.phone {
+  grid-area: phone;
+}
+.date {
+  grid-area: date;
+}
+.lieu {
+  grid-area: lieu;
+}
+.presta {
+  grid-area: presta;
+}
+.guest {
+  grid-area: guest;
+}
+.txt {
+  grid-area: txt;
+}
+.btn {
+  grid-area: btn;
 }
 .form {
-  width: 50%;
-  min-width: 380px;
-  max-width: 600px;
+  position: relative;
+  width: 700px;
   height: 60vh;
-  margin: 20px auto;
-  padding: 15px 50px 15px 50px;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "1 1"
-    "2 2"
-    "3 3"
-    "4 5"
-    "6 6"
-    "7 7"
-    "8 8";
+  margin: 55px auto;
+  padding: 15px 20px 15px 20px;
   background: $color-8;
   border-radius: 16px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  color: $color-1;
   &__name {
     letter-spacing: 1px;
   }
   &__input {
-    width: 100%;
+    width: 95%;
     height: 30px;
     margin-top: 5px;
     background: $color-txt;
     border: 1px solid transparent;
     border-radius: 10px;
+    font-size: 1rem;
     &:focus {
-      border: 2px solid $color-1;
+      // border: 1px solid $color-1;
+    }
+    &[type="range"] {
+      appearance: none;
+      height: 17px;
+      margin: 10px auto;
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 14px;
+        height: 30px;
+        background: $color-1;
+        border-radius: 10px;
+        cursor: grab;
+        opacity: 0.9;
+        &:active {
+          cursor: grabbing;
+        }
+      }
     }
   }
   &__txt > textarea {
     resize: none;
     width: 100%;
-    height: 80%;
+    height: 100%;
     margin-top: 5px;
     border: 1px solid transparent;
     border-radius: 10px;
+    font-size: 1rem;
+  }
+  &__txt__error {
+    color: red;
+    font-size: 0.7rem;
   }
   &__btn {
     width: auto;
-    margin: 5px auto 0px;
+    margin: 40px auto 0px;
     padding: 10px;
     background: $color-1;
     color: $color-txt;
     border-style: none;
     border-radius: 10px;
+    &:hover {
+      @include btn-hover;
+    }
+    &:active {
+      @include btn-active();
+    }
   }
+}
+#numberOfGuests {
+  position: absolute;
+  top: 240px;
+  left: 553px;
+  width: 50px;
+  background: transparent;
+  border: none;
+  color: #0a0252;
+  font-size: 1.1rem;
 }
 // ----------------------------------------------------
 //                      CONTACT
@@ -509,17 +598,18 @@ a {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin: 55px auto;
     &__thumb {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       align-content: center;
-      width: 170px;
-      height: 170px;
-      background: $color-8;
-      color: $color-1;
+      width: 220px;
+      height: 100px;
+      background: #f0f5ff;
+      color: #0a0252;
       text-align: center;
-      border-radius: 50%;
+      border-radius: 30px;
       &--logo {
         height: 40px;
         width: 100%;
@@ -530,13 +620,13 @@ a {
         height: 20px;
         width: 100%;
         margin: 0px;
-        font-size: 0.7rem;
+        font-size: 1rem;
       }
       &--link {
         align-items: center;
         height: 20px;
         margin: 0px;
-        font-size: 0.7rem;
+        font-size: 1rem;
       }
       &--txt {
         padding: 20px;
@@ -550,5 +640,69 @@ a {
         }
       }
     }
+  }
+}
+
+// ----------------------------------------------------
+//                      FOOTER
+// ----------------------------------------------------
+.foot {
+  height: 5vh;
+  background: $color-1;
+  color: $color-txt;
+  &__txt {
+    margin: 0 auto;
+    padding: 14px;
+    text-align: center;
+    & a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ----------------------------------------------------
+//                    PAGE PRESTATIONS
+// ----------------------------------------------------
+
+.prestation {
+  position: relative;
+  width: 90%;
+  height: 78vh;
+  margin: 60px auto;
+  background: $color-8;
+  border-radius: 40px;
+  &__choice {
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    background: $color-1;
+    color: $color-txt;
+    border: 1px solid $color-8;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+    font-size: 1.4rem;
+  }
+}
+
+#choice {
+  &-1 {
+    position: absolute;
+    top: -40px;
+    left: 150px;
+  }
+  &-2 {
+    position: absolute;
+    top: -40px;
+    left: 355px;
+  }
+  &-3 {
+    position: absolute;
+    top: -40px;
+    left: 560px;
+  }
+  &-4 {
+    position: absolute;
+    top: -40px;
+    left: 765px;
   }
 }
