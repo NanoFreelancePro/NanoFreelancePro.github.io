@@ -113,6 +113,11 @@ a {
   text-align: left;
   text-shadow: 1px 3px 2px black;
   opacity: 0.9;
+  @media screen and (max-width: 1024px) {
+    top: 25vh;
+    left: 35%;
+    font-size: 4rem;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -124,6 +129,9 @@ a {
     text-shadow: 1px 3px 2px black;
     transform: translateY(-4px);
     animation: anim 0.8s linear infinite;
+    @media screen and (max-width: 1024px) {
+      height: 4rem;
+    }
   }
 }
 .header {
@@ -134,6 +142,9 @@ a {
     center/cover;
   overflow: hidden;
   box-shadow: 0px 0px 20px 0px #000;
+  @media screen and (max-width: 1024px) {
+    height: 40vh;
+  }
   &__title {
     position: absolute;
     top: 40vh;
@@ -144,20 +155,32 @@ a {
     text-align: center;
     text-shadow: 1px 3px 2px black;
     opacity: 0.9;
+    @media screen and (max-width: 1024px) {
+      top: 15vh;
+      font-size: 4rem;
+    }
   }
   &__bar {
     display: flex;
     justify-content: space-between;
+    height: 90px;
     background: $color-1;
     opacity: 0;
     animation: anim-menu 3000ms ease-in-out both;
-    transition: 6000ms;
+    transition: 3000ms;
+    @media screen and (max-width: 1024px) {
+      height: 5vh;
+    }
     &--logo {
       width: 150px;
-      margin: 10px;
+      @media screen and (max-width: 1024px) {
+        width: 25%;
+      }
     }
     &--logo img {
+      object-fit: contain;
       width: 100%;
+      height: 100%;
     }
     &--menu {
       display: flex;
@@ -165,6 +188,9 @@ a {
       align-items: center;
       flex-wrap: wrap;
       width: 500px;
+      @media screen and (max-width: 1024px) {
+        width: 75%;
+      }
       &--btn {
         display: flex;
         justify-content: center;
@@ -173,6 +199,10 @@ a {
         height: 30px;
         padding: 10px;
         font-size: 1.2rem;
+        @media screen and (max-width: 1024px) {
+          width: 30%;
+          font-size: 1.4rem;
+        }
         &:hover {
           font-weight: bold;
         }
@@ -206,17 +236,31 @@ a {
   height: 100vh;
   margin: 0 auto;
   background: $color-8;
+  @media screen and (max-width: 1024px) {
+    height: auto;
+    margin: 50px auto;
+  }
   &__container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 90%;
     height: 60vh;
     padding: 20px;
+    @media screen and (max-width: 1024px) {
+      height: auto;
+    }
     &__pic {
       width: 40%;
+      height: 100%;
       object-fit: cover;
       border-radius: 50px;
       box-shadow: 3px 3px 20px 0px #000000;
+      @media screen and (max-width: 1024px) {
+        width: 50%;
+        height: 400px;
+        margin-bottom: 50px;
+      }
     }
     &__txt {
       width: 50%;
@@ -225,6 +269,10 @@ a {
       color: $color-1;
       border-radius: 75px;
       box-shadow: 3px 3px 8px 0px #0a0252;
+      @media screen and (max-width: 1024px) {
+        width: 96%;
+        height: auto;
+      }
       &--name {
         margin: 0;
         font-size: 3rem;
@@ -241,6 +289,10 @@ a {
         font-size: 1rem;
         text-align: justify;
         letter-spacing: 1px;
+        @media screen and (max-width: 1024px) {
+          max-width: 90%;
+          font-size: 1.8rem;
+        }
         &::before {
           content: "\275D  ";
         }
@@ -260,6 +312,9 @@ a {
         animation: heartbeat 3s ease-in-out infinite both;
         cursor: pointer;
         transition: 300ms ease-in-out;
+        @media screen and (max-width: 1024px) {
+          font-size: 2.5rem;
+        }
         &:hover {
           animation: btn-hover 300ms ease-in-out both;
         }
@@ -323,6 +378,9 @@ a {
   overflow: hidden;
   background: $color-8;
   color: $color-1;
+  @media screen and (max-width: 1024px) {
+    height: auto;
+  }
   &__title {
     width: 395px;
     height: auto;
@@ -338,6 +396,9 @@ a {
     justify-content: space-around;
     align-items: center;
     height: 70vh;
+    @media screen and (max-width: 1024px) {
+      height: auto;
+    }
     &__thumb {
       width: 48%;
       height: 30vh;
@@ -346,24 +407,42 @@ a {
       text-align: center;
       border-radius: 75px;
       box-shadow: 3px 3px 8px 0px #0a0252;
+      @media screen and (max-width: 1024px) {
+        width: 96%;
+        height: auto;
+        margin-bottom: 50px;
+      }
       &--title {
         margin: 10px;
         font-size: 1.5rem;
         text-align: center;
         text-overflow: ellipsis;
+        @media screen and (max-width: 1024px) {
+          margin: 20px;
+          font-size: 2rem;
+        }
       }
       &__middle {
         display: flex;
+        align-items: center;
         height: 55%;
+        @media screen and (max-width: 1024px) {
+          height: auto;
+          margin: 20px auto;
+        }
         &--pic {
           object-fit: cover;
           width: 30%;
           height: 100%;
           margin: 0px auto;
           border-radius: 4px;
+          @media screen and (max-width: 1024px) {
+            max-height: 200px;
+          }
         }
         &--txt {
           width: 70%;
+          height: 100%;
           margin: 0px auto;
           padding: 0 10px;
           font-size: 1rem;
@@ -371,6 +450,9 @@ a {
           white-space: pre-line;
           text-overflow: ellipsis;
           text-align: justify;
+          @media screen and (max-width: 1024px) {
+            font-size: 1.6rem;
+          }
         }
       }
       &--btn {
@@ -383,6 +465,9 @@ a {
         border-radius: 10px;
         animation: heartbeat 3s ease-in-out infinite both;
         cursor: pointer;
+        @media screen and (max-width: 1024px) {
+          font-size: 2rem;
+        }
         &:hover {
           animation: btn-hover 300ms ease-in-out both;
         }
@@ -692,6 +777,9 @@ a {
   height: 5vh;
   background: $color-1;
   color: $color-txt;
+  @media screen and (max-width: 1024px) {
+    height: auto;
+  }
   &__txt {
     margin: 0 auto;
     padding: 14px;
