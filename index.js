@@ -54,23 +54,36 @@ const btnHome = document.querySelector(".header__home");
 window.addEventListener("scroll", () => {
   scrollValue =
     (window.innerHeight + window.scrollY) / document.body.offsetHeight;
-  // console.log(scrollValue);
-  if (scrollValue > 0.265) {
+  console.log(scrollValue);
+  console.log(innerWidth);
+  if (
+    (scrollValue > 0.265) & (innerWidth >= 1024) ||
+    (scrollValue > 0.2) & (innerWidth < 1024)
+  ) {
     btnHome.style.opacity = "1";
   } else {
     btnHome.style.opacity = "0";
   }
-  if (scrollValue > 0.64) {
+  if (
+    (scrollValue > 0.64) & (innerWidth >= 1024) ||
+    (scrollValue > 0.44) & (innerWidth < 1024)
+  ) {
     title1.style.transform = "translateX(0px)";
   } else {
     title1.style.transform = "translateX(-500px)";
   }
-  if (scrollValue > 0.7) {
+  if (
+    (scrollValue > 0.7) & (innerWidth >= 1024) ||
+    (scrollValue > 0.48) & (innerWidth < 1024)
+  ) {
     title2.style.transform = "translateX(0px)";
   } else {
     title2.style.transform = "translateX(500px)";
   }
-  if (scrollValue > 0.74) {
+  if (
+    (scrollValue > 0.7) & (innerWidth >= 1024) ||
+    (scrollValue > 0.53) & (innerWidth < 1024)
+  ) {
     title3.style.transform = "translateX(0px)";
   } else {
     title3.style.transform = "translateX(-500px)";

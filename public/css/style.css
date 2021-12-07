@@ -125,6 +125,7 @@ a {
 @media screen and (max-width: 1024px) {
   .header {
     height: 40vh;
+    background: url("../../public/img/pexels-energepiccom-2988289.jpg") center/cover;
   }
 }
 .header__title {
@@ -227,7 +228,7 @@ a {
 @media screen and (max-width: 1024px) {
   .presentation {
     height: auto;
-    margin: 50px auto;
+    padding: 50px 0;
   }
 }
 .presentation__container {
@@ -330,8 +331,13 @@ a {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../../public/img/pexels-oleg-gurin-3695476.jpg") center/cover;
+  background: url("../../public/img/pexels-oleg-gurin-3695476.jpg") fixed center/cover;
   box-shadow: 0px 0px 20px 0px #000;
+}
+@media screen and (max-width: 1024px) {
+  .transition {
+    background: url("../../public/img/pexels-oleg-gurin-3695476.jpg") center/cover;
+  }
 }
 .transition__title {
   margin: 0;
@@ -406,7 +412,7 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .prest__container__thumb {
-    width: 96%;
+    width: 90%;
     height: auto;
     margin-bottom: 50px;
   }
@@ -443,23 +449,25 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .prest__container__thumb__middle--pic {
-    max-height: 200px;
+    height: 250px;
+    padding: 0 20px;
+    border-radius: 20px;
   }
 }
 .prest__container__thumb__middle--txt {
   width: 70%;
   height: 100%;
   margin: 0px auto;
-  padding: 0 10px;
+  padding: 0 20px;
   font-size: 1rem;
   overflow: hidden;
-  white-space: pre-line;
-  text-overflow: ellipsis;
+  letter-spacing: 1px;
   text-align: justify;
+  text-overflow: ellipsis;
 }
 @media screen and (max-width: 1024px) {
   .prest__container__thumb__middle--txt {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 .prest__container__thumb--btn {
@@ -475,7 +483,8 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .prest__container__thumb--btn {
-    font-size: 2rem;
+    margin-top: 20px;
+    font-size: 1.4rem;
   }
 }
 .prest__container__thumb--btn:hover {
@@ -503,12 +512,23 @@ a {
   background: #0a0252;
   opacity: 1;
 }
+@media screen and (max-width: 1024px) {
+  .main__header__bar {
+    height: 5vh;
+  }
+}
 .main__header__bar--logo {
   width: 150px;
-  margin: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .main__header__bar--logo {
+    width: 25%;
+  }
 }
 .main__header__bar--logo img {
+  object-fit: contain;
   width: 100%;
+  height: 100%;
   opacity: 0.9;
 }
 .main__header__bar--menu {
@@ -518,6 +538,11 @@ a {
   flex-wrap: wrap;
   width: 500px;
 }
+@media screen and (max-width: 1024px) {
+  .main__header__bar--menu {
+    width: 75%;
+  }
+}
 .main__header__bar--menu--btn {
   display: flex;
   justify-content: center;
@@ -526,6 +551,12 @@ a {
   height: 30px;
   padding: 10px;
   font-size: 1.2rem;
+}
+@media screen and (max-width: 1024px) {
+  .main__header__bar--menu--btn {
+    width: 30%;
+    font-size: 1.4rem;
+  }
 }
 .main__header__bar--menu--btn:hover {
   font-weight: bold;
@@ -608,7 +639,7 @@ a {
 @media screen and (max-width: 1024px) {
   .form {
     width: 90%;
-    height: 80vh;
+    height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, 1fr) 2fr 1fr;
     gap: 20px 0px;
@@ -740,9 +771,18 @@ a {
   text-align: center;
   border-radius: 30px;
 }
+@media screen and (max-width: 1024px) {
+  .contact__container__thumb {
+    align-content: space-around;
+    width: 350px;
+    height: 150px;
+    margin: 40px;
+  }
+}
 .contact__container__thumb--logo {
   height: 40px;
   width: 100%;
+  margin-top: 10px;
   font-size: 2rem;
 }
 .contact__container__thumb--type {
@@ -752,11 +792,22 @@ a {
   margin: 0px;
   font-size: 1rem;
 }
+@media screen and (max-width: 1024px) {
+  .contact__container__thumb--type {
+    font-size: 1.5rem;
+  }
+}
 .contact__container__thumb--link {
   align-items: center;
   height: 20px;
   margin: 0px;
   font-size: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .contact__container__thumb--link {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
 }
 .contact__container__thumb--txt {
   padding: 20px;
