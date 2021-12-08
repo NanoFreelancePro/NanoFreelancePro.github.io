@@ -66,7 +66,7 @@ window.addEventListener("scroll", () => {
   }
   if (
     (scrollValue > 0.64) & (innerWidth >= 1024) ||
-    (scrollValue > 0.44) & (innerWidth < 1024)
+    (scrollValue > 0.53) & (innerWidth < 1024)
   ) {
     title1.style.transform = "translateX(0px)";
   } else {
@@ -74,7 +74,7 @@ window.addEventListener("scroll", () => {
   }
   if (
     (scrollValue > 0.7) & (innerWidth >= 1024) ||
-    (scrollValue > 0.48) & (innerWidth < 1024)
+    (scrollValue > 0.615) & (innerWidth < 1024)
   ) {
     title2.style.transform = "translateX(0px)";
   } else {
@@ -82,7 +82,7 @@ window.addEventListener("scroll", () => {
   }
   if (
     (scrollValue > 0.7) & (innerWidth >= 1024) ||
-    (scrollValue > 0.53) & (innerWidth < 1024)
+    (scrollValue > 0.71) & (innerWidth < 1024)
   ) {
     title3.style.transform = "translateX(0px)";
   } else {
