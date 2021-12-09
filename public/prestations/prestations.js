@@ -1,12 +1,21 @@
 const mouseTarget = document.addEventListener("click", (e) => {
   console.log(e.target);
 });
-const section = document.getElementsByClassName("prestation");
-const choice = document.querySelectorAll(".prestation__choice");
-const active = document.getElementById("active");
+const btnHome = document.querySelector(".prestation__header__home");
 
-function activeLink() {
-  choice.forEach((item) => item.classList.remove("toggle-active"));
-  this.classList.add("toggle-active");
-}
-choice.forEach((item) => item.addEventListener("click", activeLink));
+window.addEventListener("scroll", () => {
+  scrollValue =
+    (window.innerHeight + window.scrollY) / document.body.offsetHeight;
+  console.log(scrollValue);
+  console.log(innerWidth);
+  console.log(innerHeight);
+  if (
+    (scrollValue > 0.14) & (innerWidth > 1024) ||
+    (scrollValue > 0.147) & (innerWidth <= 1024) ||
+    (scrollValue > 0.185) & (innerWidth <= 400)
+  ) {
+    btnHome.style.opacity = "1";
+  } else {
+    btnHome.style.opacity = "0";
+  }
+});

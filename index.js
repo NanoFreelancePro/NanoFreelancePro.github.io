@@ -56,33 +56,35 @@ window.addEventListener("scroll", () => {
     (window.innerHeight + window.scrollY) / document.body.offsetHeight;
   console.log(scrollValue);
   console.log(innerWidth);
+  console.log(innerHeight);
   if (
-    (scrollValue > 0.265) & (innerWidth >= 1024) ||
-    (scrollValue > 0.2) & (innerWidth < 1024)
+    (scrollValue > 0.265) & (innerWidth > 1024) ||
+    (scrollValue > 0.237) & (innerWidth <= 1024) ||
+    (scrollValue > 0.24) & (innerWidth <= 400)
   ) {
     btnHome.style.opacity = "1";
   } else {
     btnHome.style.opacity = "0";
   }
   if (
-    (scrollValue > 0.64) & (innerWidth >= 1024) ||
-    (scrollValue > 0.53) & (innerWidth < 1024)
+    (scrollValue > 0.64) & (innerWidth > 1024) ||
+    (scrollValue > 0.425) & (innerWidth <= 1024)
   ) {
     title1.style.transform = "translateX(0px)";
   } else {
     title1.style.transform = "translateX(-500px)";
   }
   if (
-    (scrollValue > 0.7) & (innerWidth >= 1024) ||
-    (scrollValue > 0.615) & (innerWidth < 1024)
+    (scrollValue > 0.7) & (innerWidth > 1024) ||
+    (scrollValue > 0.455) & (innerWidth <= 1024)
   ) {
     title2.style.transform = "translateX(0px)";
   } else {
     title2.style.transform = "translateX(500px)";
   }
   if (
-    (scrollValue > 0.7) & (innerWidth >= 1024) ||
-    (scrollValue > 0.71) & (innerWidth < 1024)
+    (scrollValue > 0.7) & (innerWidth > 1024) ||
+    (scrollValue > 0.515) & (innerWidth <= 1024)
   ) {
     title3.style.transform = "translateX(0px)";
   } else {
