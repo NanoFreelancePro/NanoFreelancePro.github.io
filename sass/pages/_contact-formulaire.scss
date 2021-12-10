@@ -1,0 +1,145 @@
+// ----------------------------------------------------
+//                      FORMULAIRE
+// ----------------------------------------------------
+.lastName {
+  grid-area: lastName;
+}
+.firstName {
+  grid-area: firstName;
+}
+.email {
+  grid-area: email;
+}
+.phone {
+  grid-area: phone;
+}
+.date {
+  grid-area: date;
+}
+.lieu {
+  grid-area: lieu;
+}
+.presta {
+  grid-area: presta;
+}
+.guest {
+  grid-area: guest;
+}
+.txt {
+  grid-area: txt;
+}
+.btn {
+  grid-area: btn;
+}
+.form {
+  position: relative;
+  width: 700px;
+  height: 60vh;
+  margin: 55px auto;
+  padding: 15px 20px 15px 20px;
+  background: $color-8;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  color: $color-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 2fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "lastName firstName"
+    "email phone"
+    "date lieu"
+    "presta guest"
+    "txt txt"
+    "btn btn";
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr) 2fr 1fr;
+    gap: 20px 0px;
+    grid-template-areas:
+      "lastName"
+      "firstName"
+      "email"
+      "date"
+      "lieu"
+      "phone"
+      "presta"
+      "guest"
+      "txt"
+      "btn";
+  }
+  &__name {
+    letter-spacing: 1px;
+  }
+  &__input {
+    width: 95%;
+    height: 30px;
+    margin-top: 5px;
+    background: $color-txt;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+    &[type="range"] {
+      appearance: none;
+      height: 17px;
+      margin: 10px auto;
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 14px;
+        height: 30px;
+        background: $color-1;
+        border-radius: 10px;
+        cursor: grab;
+        opacity: 0.9;
+        &:active {
+          cursor: grabbing;
+        }
+      }
+    }
+  }
+  &__txt > textarea {
+    resize: none;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  &__txt__error {
+    color: red;
+    font-size: 0.7rem;
+  }
+  &__btn {
+    width: auto;
+    margin: 40px auto 0px;
+    padding: 10px;
+    background: $color-1;
+    color: $color-txt;
+    border-style: none;
+    border-radius: 10px;
+    &:hover {
+      @include btn-hover;
+    }
+    &:active {
+      @include btn-active();
+    }
+  }
+}
+#numberOfGuests {
+  position: absolute;
+  top: 240px;
+  left: 553px;
+  width: 50px;
+  background: transparent;
+  border: none;
+  color: $color-1;
+  font-size: 1.1rem;
+  @media screen and (max-width: 1024px) {
+    top: 684px;
+    left: 190px;
+    width: 50px;
+  }
+}

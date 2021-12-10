@@ -1,0 +1,127 @@
+// ----------------------------------------------------
+//                    EN TETE
+// ----------------------------------------------------
+#target {
+  position: absolute;
+  top: 55vh;
+  left: 35%;
+  width: auto;
+  margin: 0 auto;
+  color: $color-txt;
+  font-size: 6rem;
+  text-align: left;
+  text-shadow: 1px 3px 2px black;
+  opacity: 0.9;
+  @media screen and (max-width: 1024px) {
+    top: 25vh;
+    left: 35%;
+    font-size: 4rem;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: -10px;
+    width: 5px;
+    height: 6rem;
+    background: $color-txt;
+    text-shadow: 1px 3px 2px black;
+    transform: translateY(-4px);
+    animation: anim 0.8s linear infinite;
+    @media screen and (max-width: 1024px) {
+      height: 4rem;
+    }
+  }
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../public/img/alexander-popov-JhYnL-BiP18-unsplash.jpg")
+    fixed center/cover;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0px #000;
+  @media screen and (max-width: 1024px) {
+    height: 40vh;
+    background: url("../../public/img/alexander-popov-JhYnL-BiP18-unsplash.jpg")
+      center/cover;
+  }
+  &__title {
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    margin: 0 auto;
+    color: $color-txt;
+    font-size: 6rem;
+    text-align: center;
+    text-shadow: 1px 3px 2px black;
+    opacity: 0.9;
+    @media screen and (max-width: 1024px) {
+      top: 15vh;
+      font-size: 4rem;
+    }
+  }
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    background: $color-1;
+    opacity: 0;
+    animation: anim-menu 3000ms ease-in-out both;
+    transition: 3000ms;
+    @media screen and (max-width: 1024px) {
+      height: 5vh;
+    }
+    &--logo {
+      width: 150px;
+      @media screen and (max-width: 1024px) {
+        width: 25%;
+      }
+    }
+    &--logo img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+    &--menu {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 500px;
+      @media screen and (max-width: 1024px) {
+        width: 75%;
+      }
+      &--btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 30px;
+        padding: 10px;
+        font-size: 1.2rem;
+        @media screen and (max-width: 1024px) {
+          width: 30%;
+          font-size: 1.4rem;
+        }
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__home {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 10;
+    padding: 16px;
+    border: 1px solid $color-txt;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: $color-1;
+    color: $color-txt;
+    opacity: 0;
+    transition: 500ms ease-in-out;
+  }
+}

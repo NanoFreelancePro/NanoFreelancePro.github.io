@@ -1,0 +1,56 @@
+/* KEYFRAMES */
+@keyframes btn-hover {
+  100% {
+    @include btn-hover();
+  }
+}
+@keyframes anim {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  5% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  8% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  16% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  22% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes pulsate-fwd {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

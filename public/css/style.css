@@ -497,6 +497,25 @@ li {
   background: #070139;
 }
 
+.foot {
+  height: 5vh;
+  background: #0a0252;
+  color: #fff;
+}
+@media screen and (max-width: 1024px) {
+  .foot {
+    height: auto;
+  }
+}
+.foot__txt {
+  margin: 0 auto;
+  padding: 14px;
+  text-align: center;
+}
+.foot__txt a:hover {
+  text-decoration: underline;
+}
+
 .contact__bg {
   background: url("../../public/contact/img/pexels-hendrik-b-744318.jpg") center/cover;
 }
@@ -667,10 +686,6 @@ li {
   text-decoration: underline;
 }
 
-#active {
-  font-weight: bold;
-}
-
 .lastName {
   grid-area: lastName;
 }
@@ -813,25 +828,6 @@ li {
     left: 190px;
     width: 50px;
   }
-}
-
-.foot {
-  height: 5vh;
-  background: #0a0252;
-  color: #fff;
-}
-@media screen and (max-width: 1024px) {
-  .foot {
-    height: auto;
-  }
-}
-.foot__txt {
-  margin: 0 auto;
-  padding: 14px;
-  text-align: center;
-}
-.foot__txt a:hover {
-  text-decoration: underline;
 }
 
 .prestation__header {
@@ -1549,7 +1545,7 @@ li {
   background: #f0f5ff;
 }
 .event__title {
-  width: 60%;
+  width: 970px;
   margin: 50px auto;
   padding: 10px;
   background: #0a0252;
@@ -1565,7 +1561,7 @@ li {
   }
 }
 .event__txt {
-  width: 60%;
+  width: 970px;
   margin: 0 auto;
   color: #0a0252;
   letter-spacing: 1px;
@@ -1744,7 +1740,8 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .event__price__thumb--list--desc {
-    height: 120px;
+    height: 70px;
+    padding: 15px 5px 2px 60px;
     font-size: 1.4rem;
   }
 }
@@ -1778,6 +1775,262 @@ li {
   color: #0a0252;
   font-size: 0.7rem;
   text-align: center;
+}
+
+.legal-notice {
+  width: 90%;
+  margin: 0 auto;
+}
+.legal-notice__bg {
+  background: #f0f5ff;
+}
+.legal-notice__header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.legal-notice__header__bar {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  background: #0a0252;
+}
+@media screen and (max-width: 1024px) {
+  .legal-notice__header__bar {
+    height: 5vh;
+  }
+}
+.legal-notice__header__bar--logo {
+  width: 150px;
+}
+@media screen and (max-width: 1024px) {
+  .legal-notice__header__bar--logo {
+    width: 25%;
+  }
+}
+.legal-notice__header__bar--logo img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.legal-notice__header__bar--menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+}
+@media screen and (max-width: 1024px) {
+  .legal-notice__header__bar--menu {
+    width: 75%;
+  }
+}
+.legal-notice__header__bar--menu--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 1024px) {
+  .legal-notice__header__bar--menu--btn {
+    width: 30%;
+    font-size: 1rem;
+  }
+}
+.legal-notice__header__bar--menu--btn:hover {
+  font-weight: bold;
+}
+.legal-notice__header__home {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 10;
+  padding: 16px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: #0a0252;
+  color: #fff;
+  opacity: 0;
+  transition: 500ms ease-in-out;
+}
+@media screen and (max-width: 1024px) {
+  .legal-notice__header__home {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+.legal-notice__title {
+  font-size: 2rem;
+  color: #0a0252;
+  text-decoration: underline;
+}
+.legal-notice__subtitle {
+  color: #0a0252;
+  text-decoration: underline;
+}
+.legal-notice__txt {
+  line-height: 25px;
+  text-align: justify;
+  letter-spacing: 1px;
+  color: #0a0252;
+}
+.legal-notice__txt > a {
+  color: #0a0252;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.legal-notice__foot {
+  height: auto;
+  background: #0a0252;
+  color: #fff;
+}
+@media screen and (max-width: 1024px) {
+  .legal-notice__foot {
+    height: auto;
+  }
+}
+.legal-notice__foot__txt {
+  margin: 0 auto;
+  padding: 7px;
+  text-align: center;
+}
+.legal-notice__foot__txt a:hover {
+  text-decoration: underline;
+}
+
+.confidential {
+  width: 90%;
+  margin: 0 auto;
+}
+.confidential__bg {
+  background: #f0f5ff;
+}
+.confidential__header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.confidential__header__bar {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  background: #0a0252;
+}
+@media screen and (max-width: 1024px) {
+  .confidential__header__bar {
+    height: 5vh;
+  }
+}
+.confidential__header__bar--logo {
+  width: 150px;
+}
+@media screen and (max-width: 1024px) {
+  .confidential__header__bar--logo {
+    width: 25%;
+  }
+}
+.confidential__header__bar--logo img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.confidential__header__bar--menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+}
+@media screen and (max-width: 1024px) {
+  .confidential__header__bar--menu {
+    width: 75%;
+  }
+}
+.confidential__header__bar--menu--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 1024px) {
+  .confidential__header__bar--menu--btn {
+    width: 30%;
+    font-size: 1rem;
+  }
+}
+.confidential__header__bar--menu--btn:hover {
+  font-weight: bold;
+}
+.confidential__header__home {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 10;
+  padding: 16px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: #0a0252;
+  color: #fff;
+  opacity: 0;
+  transition: 500ms ease-in-out;
+}
+@media screen and (max-width: 1024px) {
+  .confidential__header__home {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+.confidential__title {
+  font-size: 2rem;
+  color: #0a0252;
+  text-decoration: underline;
+}
+.confidential__subtitle {
+  color: #0a0252;
+  text-decoration: underline;
+}
+.confidential__txt {
+  line-height: 25px;
+  text-align: justify;
+  letter-spacing: 1px;
+  color: #0a0252;
+}
+.confidential__txt > a {
+  color: #0a0252;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.confidential__foot {
+  height: auto;
+  background: #0a0252;
+  color: #fff;
+}
+@media screen and (max-width: 1024px) {
+  .confidential__foot {
+    height: auto;
+  }
+}
+.confidential__foot__txt {
+  margin: 0 auto;
+  padding: 7px;
+  text-align: center;
+}
+.confidential__foot__txt a:hover {
+  text-decoration: underline;
+}
+
+#active {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

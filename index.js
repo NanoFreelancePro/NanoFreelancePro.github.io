@@ -54,9 +54,9 @@ const btnHome = document.querySelector(".header__home");
 window.addEventListener("scroll", () => {
   scrollValue =
     (window.innerHeight + window.scrollY) / document.body.offsetHeight;
-  console.log(scrollValue);
-  console.log(innerWidth);
-  console.log(innerHeight);
+  // console.log(scrollValue);
+  // console.log(innerWidth);
+  // console.log(innerHeight);
   if (
     (scrollValue > 0.265) & (innerWidth > 1024) ||
     (scrollValue > 0.237) & (innerWidth <= 1024) ||

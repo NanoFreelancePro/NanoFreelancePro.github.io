@@ -1,0 +1,9 @@
+// MAPS
+@mixin btn-hover {
+  font-weight: bold;
+  transform: scale(1.05);
+  background: lighten($color-1, 5);
+}
+@mixin btn-active {
+  background: darken($color-1, 5);
+}

@@ -1,0 +1,108 @@
+// ----------------------------------------------------
+//                     PRESTATIONS
+// ----------------------------------------------------
+.prest {
+  height: 100vh;
+  padding: 50px 0;
+  overflow: hidden;
+  background: $color-8;
+  color: $color-1;
+  @media screen and (max-width: 1024px) {
+    height: auto;
+  }
+  &__title {
+    width: 395px;
+    height: 40px;
+    margin: 40px auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    @media screen and (max-width: 1024px) {
+      width: 700px;
+      font-size: 4rem;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    &__thumb {
+      width: 350px;
+      height: auto;
+      margin: 20px;
+      padding: 10px;
+      color: $color-1;
+      text-align: center;
+      border-radius: 75px;
+      box-shadow: 3px 3px 8px 0px $color-1;
+      transition: 300ms;
+      @media screen and (max-width: 1200px) {
+        width: 30%;
+        margin: 10px;
+      }
+      @media screen and (max-width: 1024px) {
+        width: 90%;
+        margin: 30px;
+      }
+      &--title {
+        height: 40px;
+        margin: 10px;
+        font-size: 1.7rem;
+        text-align: center;
+        @media screen and (max-width: 1024px) {
+          height: auto;
+          margin: 20px;
+          font-size: 2.5rem;
+        }
+      }
+      &--pic {
+        object-fit: cover;
+        width: 80%;
+        height: 200px;
+        margin: 0px auto;
+        border-radius: 15px;
+        @media screen and (max-width: 1024px) {
+          height: 300px;
+        }
+      }
+      &--txt {
+        width: 80%;
+        height: 270px;
+        margin: 20px auto;
+        font-size: 1rem;
+        overflow: hidden;
+        letter-spacing: 1px;
+        text-align: justify;
+        text-overflow: ellipsis;
+        @media screen and (max-width: 1024px) {
+          height: auto;
+          font-size: 1.8rem;
+        }
+      }
+      &--btn {
+        display: block;
+        width: 150px;
+        margin: 15px auto;
+        padding: 15px;
+        background: $color-1;
+        color: $color-txt;
+        border-style: none;
+        border-radius: 10px;
+        animation: heartbeat 3s ease-in-out infinite both;
+        cursor: pointer;
+        @media screen and (max-width: 1024px) {
+          width: 250px;
+          height: 70px;
+          font-size: 1.8rem;
+        }
+        &:hover {
+          animation: btn-hover 300ms ease-in-out both;
+        }
+        &:active {
+          @include btn-active();
+        }
+      }
+    }
+  }
+}
