@@ -16,3 +16,29 @@ window.addEventListener("scroll", () => {
     btnHome.style.opacity = "0";
   }
 });
+
+//---------------------------------------------------------------
+//                          FORMULAIRE
+//---------------------------------------------------------------
+const form = document.querySelector("form");
+const inputs = document.querySelectorAll(
+  'input[type="text"],input[type="email"],input[type="tel"],input[type="date"],option[value=""],input[type="number"],textarea'
+);
+console.log(inputs);
+let lastName,
+  firstName,
+  email,
+  phone,
+  date,
+  place,
+  event,
+  numberOfGuests,
+  message;
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+inputs.addEventListener("input", (e) => {
+  console.log(e.value);
+});

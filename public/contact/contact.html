@@ -97,10 +97,10 @@
                 <label class="form__name" for="choice">Type de prestations</label>
                 <select class="form__input" id="choice" required>
                     <option value="">Séléctionnez le type de prestations</option>
-                    <option value="">Entreprise</option>
-                    <option value="">Événement</option>
-                    <option value="">Mariage</option>
-                    <option value="">Autres</option>
+                    <option value="enterprise">Entreprise</option>
+                    <option value="event">Événement</option>
+                    <option value="wedding">Mariage</option>
+                    <option value="other">Autres</option>
                 </select>
             </div>
             <div class="form__container guest">
@@ -111,7 +111,7 @@
                 <label for="message">Entrez votre message</label>
                 <textarea name="txtArea" id="message" cols="30" rows="1" placeholder="Écrivez votre message ici..."></textarea>
             </div>
-            <input class="form__btn btn" type="submit" value="ENVOYER">
+            <input id="submit" class="form__btn btn" type="submit" value="ENVOYER">
         </form>
     </section>
 <!-------------------------------------------->
