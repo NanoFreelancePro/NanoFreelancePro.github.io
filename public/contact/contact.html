@@ -50,68 +50,70 @@
 <!-------------------------------------------->
     <header class="contact__header">
     <!-- BAR -->
-        <div class="contact__header__bar">
-        <!-- LOGO -->
+        <nav class="contact__header__bar">
+            <!-- LOGO -->
             <a href="../../index.html" class="contact__header__bar--logo">
                 <img src="../img//logo/logo-vertical.png" alt="Logo du DJ 6miq">
             </a>
-        <!-- MENU -->
-            <nav class="contact__header__bar--menu">
+            <!-- MENU -->
+            <div class="contact__header__bar--menu">
                 <a href="../../index.html" class="contact__header__bar--menu--btn">Accueil</a>
                 <a href="../prestations/prestations.html" class="contact__header__bar--menu--btn">Prestations</a>
                 <a href="#" id="active" class="contact__header__bar--menu--btn">Contact</a>
-            </nav>
-        </div>
+            </div>
+        </nav>
         <a href="#"><i class="fas fa-home contact__header__home"></i></a>
     </header> 
 <!-------------------------------------------->
 <!--               FORMULAIRE               -->
 <!-------------------------------------------->
-    <form class="form parent" action="">
-        <div class="form__container lastName">
-            <label class="form__name" for="lastName">Nom</label>
-            <input class="form__input" type="text" name="lastName" id="lastName" autocomplete="off" required>
-        </div>
-        <div class="form__container firstName">
-            <label class="form__name" for="firstName">Prénom</label>
-            <input class="form__input" type="text" name="firstName" id="firstName" autocomplete="off" required>
-        </div>
-        <div class="form__container email">
-            <label class="form__name" for="email">Email</label>
-            <input class="form__input" type="email" name="email" id="email" autocomplete="off" required>
-        </div>
-        <div class="form__container phone">
-            <label class="form__name" for="phone">Téléphone</label>
-            <input class="form__input" type="tel" name="phone" id="phone" min="10" autocomplete="off" required placeholder="Format : 0658121477 (10 Chiffres)" pattern="[0-9]{10}">
-        </div>
-        <div class="form__container date">
-            <label class="form__name" for="date">Date de l'événement</label>
-            <input class="form__input" type="date" name="date" id="date" autocomplete="off" min="2022-01-01" required>
-        </div>
-        <div class="form__container lieu">
-            <label class="form__name" for="lieu">Lieu</label>
-            <input class="form__input" type="text" name="localisation" id="lieu" autocomplete="off" required placeholder="Ex : Lyon 69000">
-        </div>
-        <div class="form__choice presta">
-            <label class="form__name" for="choice">Type de prestations</label>
-            <select class="form__input" id="choice" required>
-                <option value="">Séléctionnez le type de prestations</option>
-                <option value="">Entreprise</option>
-                <option value="">Événement</option>
-                <option value="">Mariage</option>
-                <option value="">Autres</option>
-            </select>
-        </div>
-        <div class="form__container guest">
-            <label class="form__name" for="guests">Nombre d'invités</label>
-            <input class="form__input" type="number" name="guests" id="guests" min="1" max="1000" autocomplete="off" required placeholder="Entre (1 - 1000)" pattern="[0-9]{4}">
-        </div>
-        <div class="form__txt txt">
-            <label for="message">Entrez votre message</label>
-            <textarea name="txtArea" id="message" cols="30" rows="1" placeholder="Écrivez votre message ici..."></textarea>
-        </div>
-        <input class="form__btn btn" type="submit" value="ENVOYER">
-    </form>
+    <section>
+        <form class="form parent" action="">
+            <div class="form__container lastName">
+                <label class="form__name" for="lastName">Nom</label>
+                <input class="form__input" type="text" name="lastName" id="lastName" autocomplete="off" required>
+            </div>
+            <div class="form__container firstName">
+                <label class="form__name" for="firstName">Prénom</label>
+                <input class="form__input" type="text" name="firstName" id="firstName" autocomplete="off" required>
+            </div>
+            <div class="form__container email">
+                <label class="form__name" for="email">Email</label>
+                <input class="form__input" type="email" name="email" id="email" autocomplete="off" required>
+            </div>
+            <div class="form__container phone">
+                <label class="form__name" for="phone">Téléphone</label>
+                <input class="form__input" type="tel" name="phone" id="phone" min="10" autocomplete="off" required placeholder="Format : 0658121477 (10 Chiffres)" pattern="[0-9]{10}">
+            </div>
+            <div class="form__container date">
+                <label class="form__name" for="date">Date de l'événement</label>
+                <input class="form__input" type="date" name="date" id="date" autocomplete="off" min="2022-01-01" required>
+            </div>
+            <div class="form__container lieu">
+                <label class="form__name" for="lieu">Lieu</label>
+                <input class="form__input" type="text" name="localisation" id="lieu" autocomplete="off" required placeholder="Ex : Lyon 69000">
+            </div>
+            <div class="form__choice presta">
+                <label class="form__name" for="choice">Type de prestations</label>
+                <select class="form__input" id="choice" required>
+                    <option value="">Séléctionnez le type de prestations</option>
+                    <option value="">Entreprise</option>
+                    <option value="">Événement</option>
+                    <option value="">Mariage</option>
+                    <option value="">Autres</option>
+                </select>
+            </div>
+            <div class="form__container guest">
+                <label class="form__name" for="guests">Nombre d'invités</label>
+                <input class="form__input" type="number" name="guests" id="guests" min="1" max="1000" autocomplete="off" required placeholder="Entre (1 - 1000)" pattern="[0-9]{4}">
+            </div>
+            <div class="form__txt txt">
+                <label for="message">Entrez votre message</label>
+                <textarea name="txtArea" id="message" cols="30" rows="1" placeholder="Écrivez votre message ici..."></textarea>
+            </div>
+            <input class="form__btn btn" type="submit" value="ENVOYER">
+        </form>
+    </section>
 <!-------------------------------------------->
 <!--             CONTACT THUMB              -->
 <!-------------------------------------------->

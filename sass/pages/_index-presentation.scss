@@ -37,6 +37,8 @@
       }
     }
     &__txt {
+      display: flex;
+      flex-direction: column;
       width: 560px;
       padding: 10px;
       text-align: center;
@@ -44,7 +46,7 @@
       border-radius: 75px;
       box-shadow: 3px 3px 8px 0px $color-1;
       @media screen and (max-width: 1024px) {
-        width: 96%;
+        width: 80%;
         height: auto;
       }
       &--name {
@@ -65,7 +67,6 @@
         letter-spacing: 1px;
         @media screen and (max-width: 1024px) {
           max-width: 90%;
-          font-size: 1.8rem;
         }
         &::before {
           content: "\275D  ";
@@ -75,22 +76,14 @@
         }
       }
       &--btn {
-        width: 160px;
-        display: block;
         margin: 20px auto;
-        padding: 10px 15px;
-        font-size: 1.2rem;
+        padding: 15px;
         background: $color-1;
+        border-radius: 20px;
         color: $color-txt;
-        border-style: none;
-        border-radius: 10px;
         animation: heartbeat 3s ease-in-out infinite both;
         cursor: pointer;
         transition: 300ms ease-in-out;
-        @media screen and (max-width: 1024px) {
-          padding: 20px;
-          font-size: 1.4rem;
-        }
         &:hover {
           animation: btn-hover 300ms ease-in-out both;
         }

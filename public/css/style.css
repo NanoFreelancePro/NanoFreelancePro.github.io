@@ -19,32 +19,16 @@
     opacity: 1;
   }
 }
-@keyframes anim-menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.8;
-  }
-}
 @keyframes heartbeat {
   from {
     transform: scale(1);
     animation-timing-function: ease-out;
   }
-  5% {
-    transform: scale(0.91);
+  3% {
+    transform: scale(1.1);
     animation-timing-function: ease-in;
   }
-  8% {
-    transform: scale(0.98);
-    animation-timing-function: ease-out;
-  }
-  16% {
-    transform: scale(0.87);
-    animation-timing-function: ease-in;
-  }
-  22% {
+  7% {
     transform: scale(1);
     animation-timing-function: ease-out;
   }
@@ -151,11 +135,10 @@ li {
 .header__bar {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   height: 90px;
   background: #0a0252;
-  opacity: 0;
-  animation: anim-menu 3000ms ease-in-out both;
-  transition: 3000ms;
+  opacity: 0.9;
 }
 @media screen and (max-width: 1024px) {
   .header__bar {
@@ -179,7 +162,6 @@ li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   width: 500px;
 }
 @media screen and (max-width: 1024px) {
@@ -264,6 +246,8 @@ li {
   }
 }
 .presentation__container__txt {
+  display: flex;
+  flex-direction: column;
   width: 560px;
   padding: 10px;
   text-align: center;
@@ -273,7 +257,7 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .presentation__container__txt {
-    width: 96%;
+    width: 80%;
     height: auto;
   }
 }
@@ -297,7 +281,6 @@ li {
 @media screen and (max-width: 1024px) {
   .presentation__container__txt--description {
     max-width: 90%;
-    font-size: 1.8rem;
   }
 }
 .presentation__container__txt--description::before {
@@ -307,24 +290,14 @@ li {
   content: "  ❞";
 }
 .presentation__container__txt--btn {
-  width: 160px;
-  display: block;
   margin: 20px auto;
-  padding: 10px 15px;
-  font-size: 1.2rem;
+  padding: 15px;
   background: #0a0252;
+  border-radius: 20px;
   color: #fff;
-  border-style: none;
-  border-radius: 10px;
   animation: heartbeat 3s ease-in-out infinite both;
   cursor: pointer;
   transition: 300ms ease-in-out;
-}
-@media screen and (max-width: 1024px) {
-  .presentation__container__txt--btn {
-    padding: 20px;
-    font-size: 1.4rem;
-  }
 }
 .presentation__container__txt--btn:hover {
   animation: btn-hover 300ms ease-in-out both;
@@ -388,33 +361,26 @@ li {
   }
 }
 .prest__title {
-  width: 395px;
-  height: 40px;
-  margin: 40px auto;
+  margin: 30px auto;
   text-transform: uppercase;
   text-align: center;
   font-size: 2.5rem;
-}
-@media screen and (max-width: 1024px) {
-  .prest__title {
-    width: 700px;
-    font-size: 4rem;
-  }
 }
 .prest__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: auto;
 }
 .prest__container__thumb {
+  display: flex;
+  flex-direction: column;
   width: 350px;
   height: auto;
   margin: 20px;
   padding: 10px;
   color: #0a0252;
   text-align: center;
-  border-radius: 75px;
+  border-radius: 40px;
   box-shadow: 3px 3px 8px 0px #0a0252;
   transition: 300ms;
 }
@@ -426,7 +392,7 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .prest__container__thumb {
-    width: 90%;
+    width: 80%;
     margin: 30px;
   }
 }
@@ -440,12 +406,11 @@ li {
   .prest__container__thumb--title {
     height: auto;
     margin: 20px;
-    font-size: 2.5rem;
   }
 }
 .prest__container__thumb--pic {
   object-fit: cover;
-  width: 80%;
+  width: 90%;
   height: 200px;
   margin: 0px auto;
   border-radius: 15px;
@@ -456,8 +421,8 @@ li {
   }
 }
 .prest__container__thumb--txt {
-  width: 80%;
-  height: 270px;
+  width: 90%;
+  height: 230px;
   margin: 20px auto;
   font-size: 1rem;
   overflow: hidden;
@@ -468,27 +433,16 @@ li {
 @media screen and (max-width: 1024px) {
   .prest__container__thumb--txt {
     height: auto;
-    font-size: 1.8rem;
   }
 }
 .prest__container__thumb--btn {
-  display: block;
-  width: 150px;
   margin: 15px auto;
   padding: 15px;
   background: #0a0252;
   color: #fff;
-  border-style: none;
-  border-radius: 10px;
+  border-radius: 20px;
   animation: heartbeat 3s ease-in-out infinite both;
   cursor: pointer;
-}
-@media screen and (max-width: 1024px) {
-  .prest__container__thumb--btn {
-    width: 250px;
-    height: 70px;
-    font-size: 1.8rem;
-  }
 }
 .prest__container__thumb--btn:hover {
   animation: btn-hover 300ms ease-in-out both;
@@ -553,7 +507,6 @@ li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   width: 500px;
 }
 @media screen and (max-width: 1024px) {
@@ -573,6 +526,11 @@ li {
 @media screen and (max-width: 1024px) {
   .contact__header__bar--menu--btn {
     width: 30%;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact__header__bar--menu--btn {
     font-size: 1rem;
   }
 }
@@ -595,8 +553,8 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .contact__header__home {
-    font-size: 1rem;
-    padding: 10px;
+    padding: 5px;
+    font-size: 0.6rem;
   }
 }
 .contact__container {
@@ -610,9 +568,9 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-content: center;
   width: 220px;
-  height: 100px;
+  padding: 15px;
+  align-content: center;
   background: #f0f5ff;
   color: #0a0252;
   text-align: center;
@@ -620,23 +578,24 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .contact__container__thumb {
-    align-content: space-around;
-    width: 295px;
-    height: 150px;
-    margin: 40px;
+    width: 310px;
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact__container__thumb {
+    width: 265px;
+    margin: 20px;
   }
 }
 .contact__container__thumb--logo {
-  height: 40px;
   width: 100%;
-  margin-top: 10px;
   font-size: 2rem;
 }
 .contact__container__thumb--type {
   align-items: center;
-  height: 20px;
   width: 100%;
-  margin: 0px;
+  margin: 0;
   font-size: 1rem;
 }
 @media screen and (max-width: 1024px) {
@@ -644,16 +603,24 @@ li {
     font-size: 1.5rem;
   }
 }
+@media screen and (max-width: 800px) {
+  .contact__container__thumb--type {
+    font-size: 1rem;
+  }
+}
 .contact__container__thumb--link {
+  margin: 0;
   align-items: center;
-  height: 20px;
-  margin: 0px;
   font-size: 1rem;
 }
 @media screen and (max-width: 1024px) {
   .contact__container__thumb--link {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact__container__thumb--link {
+    font-size: 1rem;
   }
 }
 .contact__container__thumb--txt {
@@ -671,11 +638,6 @@ li {
   height: auto;
   background: #0a0252;
   color: #fff;
-}
-@media screen and (max-width: 1024px) {
-  .contact__foot {
-    height: auto;
-  }
 }
 .contact__foot__txt {
   margin: 0 auto;
@@ -746,13 +708,16 @@ li {
   .form {
     width: 90%;
     height: auto;
+    margin: 20px auto;
+    padding: 15px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, 1fr) 2fr 1fr;
-    gap: 20px 0px;
     grid-template-areas: "lastName" "firstName" "email" "date" "lieu" "phone" "presta" "guest" "txt" "btn";
   }
 }
 .form__name {
+  display: block;
+  width: 50%;
   letter-spacing: 1px;
 }
 .form__input {
@@ -783,7 +748,7 @@ li {
 }
 .form__txt > textarea {
   resize: none;
-  width: 100%;
+  width: 95%;
   height: 100%;
   margin-top: 5px;
   border: 1px solid transparent;
@@ -810,24 +775,6 @@ li {
 }
 .form__btn:active {
   background: #070139;
-}
-
-#numberOfGuests {
-  position: absolute;
-  top: 240px;
-  left: 553px;
-  width: 50px;
-  background: transparent;
-  border: none;
-  color: #0a0252;
-  font-size: 1.1rem;
-}
-@media screen and (max-width: 1024px) {
-  #numberOfGuests {
-    top: 684px;
-    left: 190px;
-    width: 50px;
-  }
 }
 
 .prestation__header {
@@ -869,7 +816,6 @@ li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   width: 500px;
 }
 @media screen and (max-width: 1024px) {
@@ -889,7 +835,7 @@ li {
 @media screen and (max-width: 1024px) {
   .prestation__header__bar--menu--btn {
     width: 30%;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 .prestation__header__bar--menu--btn:hover {
@@ -908,12 +854,6 @@ li {
   color: #fff;
   opacity: 0;
   transition: 500ms ease-in-out;
-}
-@media screen and (max-width: 1024px) {
-  .prestation__header__home {
-    font-size: 1rem;
-    padding: 10px;
-  }
 }
 .prestation__foot {
   height: auto;
@@ -964,9 +904,10 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: auto;
 }
 .main__prest__container__thumb {
+  display: flex;
+  flex-direction: column;
   width: 350px;
   height: auto;
   margin: 20px;
@@ -974,8 +915,7 @@ li {
   background: #f0f5ff;
   color: #0a0252;
   text-align: center;
-  border-radius: 75px;
-  box-shadow: 3px 3px 8px 0px #000;
+  border-radius: 40px;
   transition: 300ms;
 }
 @media screen and (max-width: 1200px) {
@@ -986,7 +926,7 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .main__prest__container__thumb {
-    width: 90%;
+    width: 80%;
     margin: 30px;
   }
 }
@@ -1000,12 +940,11 @@ li {
   .main__prest__container__thumb--title {
     height: auto;
     margin: 20px;
-    font-size: 2.5rem;
   }
 }
 .main__prest__container__thumb--pic {
   object-fit: cover;
-  width: 80%;
+  width: 90%;
   height: 200px;
   margin: 0px auto;
   border-radius: 15px;
@@ -1016,8 +955,8 @@ li {
   }
 }
 .main__prest__container__thumb--txt {
-  width: 80%;
-  height: 270px;
+  width: 90%;
+  height: 230px;
   margin: 20px auto;
   font-size: 1rem;
   overflow: hidden;
@@ -1028,33 +967,29 @@ li {
 @media screen and (max-width: 1024px) {
   .main__prest__container__thumb--txt {
     height: auto;
-    font-size: 1.5rem;
   }
 }
 .main__prest__container__thumb--btn {
-  display: block;
-  width: 150px;
   margin: 15px auto;
   padding: 15px;
   background: #0a0252;
   color: #fff;
-  border-style: none;
-  border-radius: 10px;
+  border-radius: 20px;
   animation: heartbeat 3s ease-in-out infinite both;
   cursor: pointer;
-}
-@media screen and (max-width: 1024px) {
-  .main__prest__container__thumb--btn {
-    width: 250px;
-    height: 70px;
-    font-size: 1.8rem;
-  }
 }
 .main__prest__container__thumb--btn:hover {
   animation: btn-hover 300ms ease-in-out both;
 }
 .main__prest__container__thumb--btn:active {
   background: #070139;
+}
+
+.separation {
+  height: 2px;
+  width: 50%;
+  margin: 60px auto;
+  background: #0a0252;
 }
 
 .wedding {
@@ -1065,29 +1000,28 @@ li {
   width: 60%;
   margin: 50px auto;
   padding: 10px;
-  background: #0a0252;
+  border: 3px solid #0a0252;
   border-radius: 60px;
   text-align: center;
-  color: #f0f5ff;
+  color: #0a0252;
   font-size: 3rem;
 }
 @media screen and (max-width: 1024px) {
   .wedding__title {
     width: 80%;
-    font-size: 4rem;
   }
 }
 .wedding__txt {
   width: 60%;
   margin: 0 auto;
   color: #0a0252;
-  letter-spacing: 1px;
   text-align: justify;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 @media screen and (max-width: 1024px) {
   .wedding__txt {
     width: 80%;
-    font-size: 1.5rem;
   }
 }
 .wedding__bloc {
@@ -1097,6 +1031,11 @@ li {
   width: 100%;
   margin: 20px auto;
 }
+@media screen and (max-width: 1024px) {
+  .wedding__bloc {
+    width: 80%;
+  }
+}
 .wedding__bloc__thumb {
   width: 200px;
   height: auto;
@@ -1105,8 +1044,7 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .wedding__bloc__thumb {
-    width: 40%;
-    margin: 30px;
+    width: 50%;
   }
 }
 .wedding__bloc__thumb--pic {
@@ -1118,38 +1056,47 @@ li {
 .wedding__bloc__thumb--txt {
   color: #0a0252;
   text-align: justify;
+  font-size: 1rem;
   letter-spacing: 1px;
-}
-@media screen and (max-width: 1024px) {
-  .wedding__bloc__thumb--txt {
-    font-size: 1.8rem;
-  }
 }
 .wedding__include {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin: 20px auto;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .wedding__include {
+    justify-content: space-between;
+    width: 80%;
+  }
 }
 .wedding__include__title {
   width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
   color: #0a0252;
   text-align: center;
   font-size: 1.5rem;
 }
-@media screen and (max-width: 1024px) {
-  .wedding__include__title {
-    font-size: 3rem;
-  }
-}
 .wedding__include__thumb {
   width: 195px;
-  margin: 35px;
+  margin: 10px;
   padding: 15px;
   text-align: center;
   border-radius: 20px;
   box-shadow: 2px 2px 4px 1px #0a0252;
+}
+@media screen and (max-width: 1300px) {
+  .wedding__include__thumb {
+    margin: 20px 65px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wedding__include__thumb {
+    margin: 10px;
+  }
 }
 .wedding__include__thumb--icon {
   padding: 10px;
@@ -1163,11 +1110,6 @@ li {
   font-weight: bold;
   color: #0a0252;
 }
-@media screen and (max-width: 1024px) {
-  .wedding__include__thumb--desc {
-    font-size: 1.2rem;
-  }
-}
 .wedding__include__thumb--txt {
   margin: 0;
   padding: 10px 0;
@@ -1175,13 +1117,8 @@ li {
   letter-spacing: 1px;
   text-align: justify;
 }
-@media screen and (max-width: 1024px) {
-  .wedding__include__thumb--txt {
-    font-size: 1.4rem;
-  }
-}
 .wedding__price {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 .wedding__price--separation {
@@ -1191,6 +1128,8 @@ li {
   background: #0a0252;
 }
 .wedding__price__thumb {
+  display: flex;
+  flex-direction: column;
   width: 350px;
   margin: 0 auto;
   border-radius: 20px;
@@ -1198,11 +1137,6 @@ li {
   color: #0a0252;
   text-align: center;
   overflow: hidden;
-}
-@media screen and (max-width: 1024px) {
-  .wedding__price__thumb {
-    width: 90%;
-  }
 }
 .wedding__price__thumb--title {
   margin: 0;
@@ -1225,19 +1159,16 @@ li {
   right: 35px;
   font-size: 2rem;
 }
-@media screen and (max-width: 1024px) {
-  .wedding__price__thumb--price::after {
-    right: 250px;
-  }
-}
 .wedding__price__thumb--list {
   padding: 0;
 }
 .wedding__price__thumb--list--desc {
+  display: flex;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 50px;
-  padding: 5px 5px 2px 60px;
+  padding-left: 50px;
   text-align: left;
   letter-spacing: 1px;
 }
@@ -1250,35 +1181,14 @@ li {
   font-size: 2rem;
   font-weight: bold;
 }
-@media screen and (max-width: 1024px) {
-  .wedding__price__thumb--list--desc::before {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .wedding__price__thumb--list--desc {
-    height: 120px;
-    font-size: 1.4rem;
-  }
-}
 .wedding__price__thumb--btn {
-  display: block;
-  width: 160px;
   margin: 15px auto;
   padding: 15px;
   background: #0a0252;
   color: #fff;
-  border-style: none;
   border-radius: 10px;
   animation: heartbeat 3s ease-in-out infinite both;
   cursor: pointer;
-}
-@media screen and (max-width: 1024px) {
-  .wedding__price__thumb--btn {
-    width: 250px;
-    height: 70px;
-    font-size: 1.8rem;
-  }
 }
 .wedding__price__thumb--btn:hover {
   animation: btn-hover 300ms ease-in-out both;
@@ -1289,19 +1199,11 @@ li {
 .wedding__price__condition {
   margin-top: 40px;
   color: #0a0252;
-  font-size: 0.7rem;
   text-align: center;
 }
 
 .list-01 {
   background: #e6eeff;
-}
-
-.separation {
-  height: 2px;
-  width: 50%;
-  margin: 50px auto;
-  background: #0a0252;
 }
 
 .enterprise {
@@ -1312,29 +1214,28 @@ li {
   width: 60%;
   margin: 50px auto;
   padding: 10px;
-  background: #0a0252;
+  border: 3px solid #0a0252;
   border-radius: 60px;
   text-align: center;
-  color: #f0f5ff;
+  color: #0a0252;
   font-size: 3rem;
 }
 @media screen and (max-width: 1024px) {
   .enterprise__title {
     width: 80%;
-    font-size: 4rem;
   }
 }
 .enterprise__txt {
   width: 60%;
   margin: 0 auto;
   color: #0a0252;
-  letter-spacing: 1px;
   text-align: justify;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 @media screen and (max-width: 1024px) {
   .enterprise__txt {
     width: 80%;
-    font-size: 1.5rem;
   }
 }
 .enterprise__bloc {
@@ -1344,6 +1245,11 @@ li {
   width: 100%;
   margin: 20px auto;
 }
+@media screen and (max-width: 1024px) {
+  .enterprise__bloc {
+    width: 80%;
+  }
+}
 .enterprise__bloc__thumb {
   width: 200px;
   height: auto;
@@ -1352,8 +1258,7 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .enterprise__bloc__thumb {
-    width: 40%;
-    margin: 30px;
+    width: 50%;
   }
 }
 .enterprise__bloc__thumb--pic {
@@ -1365,38 +1270,47 @@ li {
 .enterprise__bloc__thumb--txt {
   color: #0a0252;
   text-align: justify;
+  font-size: 1rem;
   letter-spacing: 1px;
-}
-@media screen and (max-width: 1024px) {
-  .enterprise__bloc__thumb--txt {
-    font-size: 1.8rem;
-  }
 }
 .enterprise__include {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin: 20px auto;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .enterprise__include {
+    justify-content: space-between;
+    width: 80%;
+  }
 }
 .enterprise__include__title {
   width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
   color: #0a0252;
   text-align: center;
   font-size: 1.5rem;
 }
-@media screen and (max-width: 1024px) {
-  .enterprise__include__title {
-    font-size: 3rem;
-  }
-}
 .enterprise__include__thumb {
   width: 195px;
-  margin: 35px;
+  margin: 10px;
   padding: 15px;
   text-align: center;
   border-radius: 20px;
   box-shadow: 2px 2px 4px 1px #0a0252;
+}
+@media screen and (max-width: 1300px) {
+  .enterprise__include__thumb {
+    margin: 20px 65px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .enterprise__include__thumb {
+    margin: 10px;
+  }
 }
 .enterprise__include__thumb--icon {
   padding: 10px;
@@ -1410,11 +1324,6 @@ li {
   font-weight: bold;
   color: #0a0252;
 }
-@media screen and (max-width: 1024px) {
-  .enterprise__include__thumb--desc {
-    font-size: 1.2rem;
-  }
-}
 .enterprise__include__thumb--txt {
   margin: 0;
   padding: 10px 0;
@@ -1422,13 +1331,8 @@ li {
   letter-spacing: 1px;
   text-align: justify;
 }
-@media screen and (max-width: 1024px) {
-  .enterprise__include__thumb--txt {
-    font-size: 1.4rem;
-  }
-}
 .enterprise__price {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 .enterprise__price--separation {
@@ -1438,6 +1342,8 @@ li {
   background: #0a0252;
 }
 .enterprise__price__thumb {
+  display: flex;
+  flex-direction: column;
   width: 350px;
   margin: 0 auto;
   border-radius: 20px;
@@ -1445,11 +1351,6 @@ li {
   color: #0a0252;
   text-align: center;
   overflow: hidden;
-}
-@media screen and (max-width: 1024px) {
-  .enterprise__price__thumb {
-    width: 90%;
-  }
 }
 .enterprise__price__thumb--title {
   margin: 0;
@@ -1472,19 +1373,16 @@ li {
   right: 35px;
   font-size: 2rem;
 }
-@media screen and (max-width: 1024px) {
-  .enterprise__price__thumb--price::after {
-    right: 250px;
-  }
-}
 .enterprise__price__thumb--list {
   padding: 0;
 }
 .enterprise__price__thumb--list--desc {
+  display: flex;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 50px;
-  padding: 5px 5px 2px 60px;
+  padding-left: 50px;
   text-align: left;
   letter-spacing: 1px;
 }
@@ -1497,35 +1395,14 @@ li {
   font-size: 2rem;
   font-weight: bold;
 }
-@media screen and (max-width: 1024px) {
-  .enterprise__price__thumb--list--desc::before {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .enterprise__price__thumb--list--desc {
-    height: 120px;
-    font-size: 1.4rem;
-  }
-}
 .enterprise__price__thumb--btn {
-  display: block;
-  width: 160px;
   margin: 15px auto;
   padding: 15px;
   background: #0a0252;
   color: #fff;
-  border-style: none;
   border-radius: 10px;
   animation: heartbeat 3s ease-in-out infinite both;
   cursor: pointer;
-}
-@media screen and (max-width: 1024px) {
-  .enterprise__price__thumb--btn {
-    width: 250px;
-    height: 70px;
-    font-size: 1.8rem;
-  }
 }
 .enterprise__price__thumb--btn:hover {
   animation: btn-hover 300ms ease-in-out both;
@@ -1536,7 +1413,6 @@ li {
 .enterprise__price__condition {
   margin-top: 40px;
   color: #0a0252;
-  font-size: 0.7rem;
   text-align: center;
 }
 
@@ -1545,32 +1421,31 @@ li {
   background: #f0f5ff;
 }
 .event__title {
-  width: 970px;
+  width: 60%;
   margin: 50px auto;
   padding: 10px;
-  background: #0a0252;
+  border: 3px solid #0a0252;
   border-radius: 60px;
   text-align: center;
-  color: #f0f5ff;
+  color: #0a0252;
   font-size: 3rem;
 }
 @media screen and (max-width: 1024px) {
   .event__title {
     width: 80%;
-    font-size: 4rem;
   }
 }
 .event__txt {
-  width: 970px;
+  width: 60%;
   margin: 0 auto;
   color: #0a0252;
-  letter-spacing: 1px;
   text-align: justify;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 @media screen and (max-width: 1024px) {
   .event__txt {
     width: 80%;
-    font-size: 1.5rem;
   }
 }
 .event__bloc {
@@ -1580,6 +1455,11 @@ li {
   width: 100%;
   margin: 20px auto;
 }
+@media screen and (max-width: 1024px) {
+  .event__bloc {
+    width: 80%;
+  }
+}
 .event__bloc__thumb {
   width: 200px;
   height: auto;
@@ -1588,8 +1468,7 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .event__bloc__thumb {
-    width: 40%;
-    margin: 30px;
+    width: 50%;
   }
 }
 .event__bloc__thumb--pic {
@@ -1601,38 +1480,47 @@ li {
 .event__bloc__thumb--txt {
   color: #0a0252;
   text-align: justify;
+  font-size: 1rem;
   letter-spacing: 1px;
-}
-@media screen and (max-width: 1024px) {
-  .event__bloc__thumb--txt {
-    font-size: 1.8rem;
-  }
 }
 .event__include {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin: 20px auto;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .event__include {
+    justify-content: space-between;
+    width: 80%;
+  }
 }
 .event__include__title {
   width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
   color: #0a0252;
   text-align: center;
   font-size: 1.5rem;
 }
-@media screen and (max-width: 1024px) {
-  .event__include__title {
-    font-size: 3rem;
-  }
-}
 .event__include__thumb {
   width: 195px;
-  margin: 35px;
+  margin: 10px;
   padding: 15px;
   text-align: center;
   border-radius: 20px;
   box-shadow: 2px 2px 4px 1px #0a0252;
+}
+@media screen and (max-width: 1300px) {
+  .event__include__thumb {
+    margin: 20px 65px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .event__include__thumb {
+    margin: 10px;
+  }
 }
 .event__include__thumb--icon {
   padding: 10px;
@@ -1646,11 +1534,6 @@ li {
   font-weight: bold;
   color: #0a0252;
 }
-@media screen and (max-width: 1024px) {
-  .event__include__thumb--desc {
-    font-size: 1.2rem;
-  }
-}
 .event__include__thumb--txt {
   margin: 0;
   padding: 10px 0;
@@ -1658,13 +1541,8 @@ li {
   letter-spacing: 1px;
   text-align: justify;
 }
-@media screen and (max-width: 1024px) {
-  .event__include__thumb--txt {
-    font-size: 1.4rem;
-  }
-}
 .event__price {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 .event__price--separation {
@@ -1674,6 +1552,8 @@ li {
   background: #0a0252;
 }
 .event__price__thumb {
+  display: flex;
+  flex-direction: column;
   width: 350px;
   margin: 0 auto;
   border-radius: 20px;
@@ -1681,11 +1561,6 @@ li {
   color: #0a0252;
   text-align: center;
   overflow: hidden;
-}
-@media screen and (max-width: 1024px) {
-  .event__price__thumb {
-    width: 90%;
-  }
 }
 .event__price__thumb--title {
   margin: 0;
@@ -1708,19 +1583,16 @@ li {
   right: 35px;
   font-size: 2rem;
 }
-@media screen and (max-width: 1024px) {
-  .event__price__thumb--price::after {
-    right: 250px;
-  }
-}
 .event__price__thumb--list {
   padding: 0;
 }
 .event__price__thumb--list--desc {
+  display: flex;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 50px;
-  padding: 5px 5px 2px 60px;
+  padding-left: 50px;
   text-align: left;
   letter-spacing: 1px;
 }
@@ -1733,36 +1605,14 @@ li {
   font-size: 2rem;
   font-weight: bold;
 }
-@media screen and (max-width: 1024px) {
-  .event__price__thumb--list--desc::before {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .event__price__thumb--list--desc {
-    height: 70px;
-    padding: 15px 5px 2px 60px;
-    font-size: 1.4rem;
-  }
-}
 .event__price__thumb--btn {
-  display: block;
-  width: 160px;
   margin: 15px auto;
   padding: 15px;
   background: #0a0252;
   color: #fff;
-  border-style: none;
   border-radius: 10px;
   animation: heartbeat 3s ease-in-out infinite both;
   cursor: pointer;
-}
-@media screen and (max-width: 1024px) {
-  .event__price__thumb--btn {
-    width: 250px;
-    height: 70px;
-    font-size: 1.8rem;
-  }
 }
 .event__price__thumb--btn:hover {
   animation: btn-hover 300ms ease-in-out both;
@@ -1773,7 +1623,6 @@ li {
 .event__price__condition {
   margin-top: 40px;
   color: #0a0252;
-  font-size: 0.7rem;
   text-align: center;
 }
 
@@ -1905,7 +1754,13 @@ li {
 
 .confidential {
   width: 90%;
+  height: 100vh;
   margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .confidential {
+    height: auto;
+  }
 }
 .confidential__bg {
   background: #f0f5ff;

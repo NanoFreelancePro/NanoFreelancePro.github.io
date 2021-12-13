@@ -3,7 +3,11 @@
 // ----------------------------------------------------
 .confidential {
   width: 90%;
+  height: 100vh;
   margin: 0 auto;
+  @media screen and (max-width: 800px) {
+    height: auto;
+  }
   &__bg {
     background: $color-8;
   }

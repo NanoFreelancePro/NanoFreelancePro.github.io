@@ -8,25 +8,24 @@
     width: 60%;
     margin: 50px auto;
     padding: 10px;
-    background: $color-1;
+    border: 3px solid $color-1;
     border-radius: 60px;
     text-align: center;
-    color: $color-8;
+    color: $color-1;
     font-size: 3rem;
     @media screen and (max-width: 1024px) {
       width: 80%;
-      font-size: 4rem;
     }
   }
   &__txt {
     width: 60%;
     margin: 0 auto;
     color: $color-1;
-    letter-spacing: 1px;
     text-align: justify;
+    font-size: 1rem;
+    letter-spacing: 1px;
     @media screen and (max-width: 1024px) {
       width: 80%;
-      font-size: 1.5rem;
     }
   }
   &__bloc {
@@ -35,14 +34,16 @@
     flex-wrap: wrap;
     width: 100%;
     margin: 20px auto;
+    @media screen and (max-width: 1024px) {
+      width: 80%;
+    }
     &__thumb {
       width: 200px;
       height: auto;
       padding: 15px;
       transition: 400ms;
       @media screen and (max-width: 1024px) {
-        width: 40%;
-        margin: 30px;
+        width: 50%;
       }
       &--pic {
         object-fit: cover;
@@ -53,10 +54,8 @@
       &--txt {
         color: $color-1;
         text-align: justify;
+        font-size: 1rem;
         letter-spacing: 1px;
-        @media screen and (max-width: 1024px) {
-          font-size: 1.8rem;
-        }
       }
     }
   }
@@ -66,23 +65,32 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    margin: 20px auto;
+    margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      justify-content: space-between;
+      width: 80%;
+    }
     &__title {
       width: 100%;
+      margin: 0;
+      margin-bottom: 20px;
       color: $color-1;
       text-align: center;
       font-size: 1.5rem;
-      @media screen and (max-width: 1024px) {
-        font-size: 3rem;
-      }
     }
     &__thumb {
       width: 195px;
-      margin: 35px;
+      margin: 10px;
       padding: 15px;
       text-align: center;
       border-radius: 20px;
       box-shadow: 2px 2px 4px 1px $color-1;
+      @media screen and (max-width: 1300px) {
+        margin: 20px 65px;
+      }
+      @media screen and (max-width: 1024px) {
+        margin: 10px;
+      }
       &--icon {
         padding: 10px;
         color: $color-1;
@@ -94,9 +102,6 @@
         text-transform: uppercase;
         font-weight: bold;
         color: $color-1;
-        @media screen and (max-width: 1024px) {
-          font-size: 1.2rem;
-        }
       }
       &--txt {
         margin: 0;
@@ -104,15 +109,12 @@
         color: $color-1;
         letter-spacing: 1px;
         text-align: justify;
-        @media screen and (max-width: 1024px) {
-          font-size: 1.4rem;
-        }
       }
     }
   }
   // --------  TARIF
   &__price {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     &--separation {
       width: 40px;
@@ -121,6 +123,8 @@
       background: $color-1;
     }
     &__thumb {
+      display: flex;
+      flex-direction: column;
       width: 350px;
       margin: 0 auto;
       border-radius: 20px;
@@ -128,9 +132,6 @@
       color: $color-1;
       text-align: center;
       overflow: hidden;
-      @media screen and (max-width: 1024px) {
-        width: 90%;
-      }
       &--title {
         margin: 0;
         font-size: 2rem;
@@ -150,18 +151,17 @@
           top: 15px;
           right: 35px;
           font-size: 2rem;
-          @media screen and (max-width: 1024px) {
-            right: 250px;
-          }
         }
       }
       &--list {
         padding: 0;
         &--desc {
+          display: flex;
+          align-items: center;
           position: relative;
           width: 100%;
           height: 50px;
-          padding: 5px 5px 2px 60px;
+          padding-left: 50px;
           text-align: left;
           letter-spacing: 1px;
           &::before {
@@ -172,32 +172,17 @@
             color: $color-1;
             font-size: 2rem;
             font-weight: bold;
-            @media screen and (max-width: 1024px) {
-              font-size: 3rem;
-            }
-          }
-          @media screen and (max-width: 1024px) {
-            height: 120px;
-            font-size: 1.4rem;
           }
         }
       }
       &--btn {
-        display: block;
-        width: 160px;
         margin: 15px auto;
         padding: 15px;
         background: $color-1;
         color: $color-txt;
-        border-style: none;
         border-radius: 10px;
         animation: heartbeat 3s ease-in-out infinite both;
         cursor: pointer;
-        @media screen and (max-width: 1024px) {
-          width: 250px;
-          height: 70px;
-          font-size: 1.8rem;
-        }
         &:hover {
           animation: btn-hover 300ms ease-in-out both;
         }
@@ -209,7 +194,6 @@
     &__condition {
       margin-top: 40px;
       color: $color-1;
-      font-size: 0.7rem;
       text-align: center;
     }
   }
